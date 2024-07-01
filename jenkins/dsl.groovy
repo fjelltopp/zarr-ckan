@@ -1,4 +1,4 @@
-multibranchPipelineJob('CKAN-build') {
+multibranchPipelineJob('ZaRR-CKAN-build') {
     branchSources {
       branchSource {
         buildStrategies {
@@ -14,11 +14,11 @@ multibranchPipelineJob('CKAN-build') {
 
         source {
           github {
-              id('ckan_project_template')
+              id('zarr-ckan')
               credentialsId('jenkins_github_api')
               repoOwner('Fjelltopp')
-              repository('ckan_project_template')
-              repositoryUrl("https://github.com/fjelltopp/ckan_project_template.git")
+              repository('zarr-ckan')
+              repositoryUrl("https://github.com/fjelltopp/zarr-ckan.git")
               configuredByUrl(true)
               traits {
                 gitHubTagDiscovery()
@@ -88,7 +88,7 @@ pipelineJob("CKAN-deploy") {
             credentials('jenkins_github_ssh')
             name('origin')
           }
-          scriptPath('jenkinsfiles/ckan_deploy.groovy')
+          scriptPath('jenkinsfiles/zarr_deploy.groovy')
           branch("remotes/origin/master")
         }
       }
