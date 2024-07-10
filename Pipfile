@@ -72,6 +72,7 @@ markupsafe = "==2.0.1"
 itsdangerous = "==2.0.1"
 # Install packages under active development in editable mode
 ckan = {path = "./ckan"}
+pyparsing = "==3.1.2"
 
 [dev-packages]
 beautifulsoup4 = "*"
