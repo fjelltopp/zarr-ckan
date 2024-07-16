@@ -1,0 +1,17 @@
+zarr-theme:
+  filter: cssrewrite
+  output: zarr/%(version)s-zarr.css
+  contents:
+    - css/source-sans-3VF.css
+    - css/zarr.css
+
+FileInputComponentStyles:
+    contents:
+        - css/FileInputComponent.css
+    output: zarr/%(version)s_FileInputComponent.css
+
+FileInputComponentScripts:
+    contents:
+        - frictionless-js.js
+        - build/FileInputComponent.js
+    output: zarr/%(version)s_FileInputComponent.js
