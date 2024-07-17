@@ -60,6 +60,7 @@ Routes = "==1.13"
 PasteDeploy = "==2.0.1"
 watchdog = "==2.1.5"
 zope = {interface = "==5.4.0"}
+pyparsing = "==3.1.2"
 ckanext-pdfview = {editable = true, ref="e4df796ceb440954d3927bdebe22a25d65e28216", git = "https://github.com/ckan/ckanext-pdfview.git"}
 ckanext-officedocs = {editable = true, ref="664f87a69509662b51f98aff53daaa232b8751d4", git = "https://github.com/jqnatividad/ckanext-officedocs.git"}
 ckanext-emailasusername = "==1.0.0"
@@ -73,7 +74,7 @@ itsdangerous = "==2.0.1"
 # Install packages under active development in editable mode
 ckan = {path = "./ckan"}
 ckanext-zarr = {editable = true, path = "./ckanext-zarr"}
-pyparsing = "==3.1.2"
+ckanext-fjelltopp-theme = {editable = true, path = "./ckanext-fjelltopp-theme"}
 
 [dev-packages]
 beautifulsoup4 = "*"
