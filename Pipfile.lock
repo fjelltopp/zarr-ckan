@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "fbe3183e1e95df4c91fadcf9242d5462a059794dff374d6b1ff062b446f46261"
+            "sha256": "ecc0aff488965880af587dfb8aeed20fdbafcf751551b6d496e01a7036782726"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -321,6 +321,10 @@
             "markers": "python_version > '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5'",
             "version": "==1.0.0"
         },
+        "ckanext-fjelltopp-theme": {
+            "editable": true,
+            "path": "./ckanext-fjelltopp-theme"
+        },
         "ckanext-officedocs": {
             "editable": true,
             "git": "https://github.com/jqnatividad/ckanext-officedocs.git",
@@ -619,7 +623,7 @@
                 "sha256:15584cf2b1bf449d98ff8a6ff1abef57bf20f3ac6454f431736cd3e660921b2f",
                 "sha256:188bd24e4c346d3f0a933f275c2fec67050326a856b9a359881d7c2a697e8812"
             ],
-            "markers": "python_version < '3.10'",
+            "markers": "python_version < '3.9'",
             "version": "==8.0.0"
         },
         "importlib-resources": {
@@ -2686,7 +2690,7 @@
                 "sha256:15584cf2b1bf449d98ff8a6ff1abef57bf20f3ac6454f431736cd3e660921b2f",
                 "sha256:188bd24e4c346d3f0a933f275c2fec67050326a856b9a359881d7c2a697e8812"
             ],
-            "markers": "python_version < '3.10'",
+            "markers": "python_version < '3.9'",
             "version": "==8.0.0"
         },
         "importlib-resources": {
