@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ecc0aff488965880af587dfb8aeed20fdbafcf751551b6d496e01a7036782726"
+            "sha256": "d3598c558bb6779e4744d5f7cc9c8098e61c0eb0a74820498479c0cef3e095b1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -344,6 +344,11 @@
             "git": "https://github.com/fjelltopp/ckanext-sentry",
             "ref": "6389c73806098fc71239cc292ce85ac5b2d0965a"
         },
+        "ckanext-versions": {
+            "editable": true,
+            "git": "https://github.com/datopian/ckanext-versions",
+            "ref": "3a6094acd730f3495b0f8b99b14a2340042a721b"
+        },
         "ckanext-zarr": {
             "editable": true,
             "path": "./ckanext-zarr"
@@ -623,7 +628,7 @@
                 "sha256:15584cf2b1bf449d98ff8a6ff1abef57bf20f3ac6454f431736cd3e660921b2f",
                 "sha256:188bd24e4c346d3f0a933f275c2fec67050326a856b9a359881d7c2a697e8812"
             ],
-            "markers": "python_version < '3.9'",
+            "markers": "python_version < '3.10'",
             "version": "==8.0.0"
         },
         "importlib-resources": {
@@ -2690,7 +2695,7 @@
                 "sha256:15584cf2b1bf449d98ff8a6ff1abef57bf20f3ac6454f431736cd3e660921b2f",
                 "sha256:188bd24e4c346d3f0a933f275c2fec67050326a856b9a359881d7c2a697e8812"
             ],
-            "markers": "python_version < '3.9'",
+            "markers": "python_version < '3.10'",
             "version": "==8.0.0"
         },
         "importlib-resources": {
