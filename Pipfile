@@ -61,6 +61,9 @@ PasteDeploy = "==2.0.1"
 watchdog = "==2.1.5"
 zope = {interface = "==5.4.0"}
 pyparsing = "==3.1.2"
+rdflib = "<7.1.0,>=6.1.1"
+geomet = ">=0.2.0"
+future = ">=0.18.2"
 ckanext-pdfview = {editable = true, ref="e4df796ceb440954d3927bdebe22a25d65e28216", git = "https://github.com/ckan/ckanext-pdfview.git"}
 ckanext-officedocs = {editable = true, ref="664f87a69509662b51f98aff53daaa232b8751d4", git = "https://github.com/jqnatividad/ckanext-officedocs.git"}
 ckanext-emailasusername = "==1.0.0"
@@ -69,6 +72,7 @@ ckanext-authz-service = {editable = true, ref = "bd4c80f55a714c1117a0e130d07463e
 ckanext-blob-storage = {editable = true, ref = "5b2f59217e8f88a3f2cdb9dc50bf4099d9abe0de", git = "https://github.com/fjelltopp/ckanext-blob-storage"}
 ckanext-scheming = {editable = true, ref = "8d62a28370c4f231dbf2f9688ede93a0356410e3", git = "https://github.com/ckan/ckanext-scheming.git"}
 ckanext-versions = {editable = true, ref = "3a6094acd730f3495b0f8b99b14a2340042a721b", git = "https://github.com/datopian/ckanext-versions"}
+ckanext-dcat = {editable = true, ref = "51d651315ff2ff594ebd6eb1d658bc7e9553310c", git = "https://github.com/ckan/ckanext-dcat"}
 # Markupsafe and isdangerous downgraded because of dependencies issue
 markupsafe = "==2.0.1"
 itsdangerous = "==2.0.1"

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d3598c558bb6779e4744d5f7cc9c8098e61c0eb0a74820498479c0cef3e095b1"
+            "sha256": "b66aa7e2fd3611672a4c7f3e208fac11e8d0dfa8b7799b51fc9da12171f6c500"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -312,6 +312,11 @@
             "git": "https://github.com/fjelltopp/ckanext-blob-storage",
             "ref": "5b2f59217e8f88a3f2cdb9dc50bf4099d9abe0de"
         },
+        "ckanext-dcat": {
+            "editable": true,
+            "git": "https://github.com/ckan/ckanext-dcat",
+            "ref": "51d651315ff2ff594ebd6eb1d658bc7e9553310c"
+        },
         "ckanext-emailasusername": {
             "hashes": [
                 "sha256:6afebf2423f58ddda68a14d201dc6b6b499a36df6fa6a08439d729333dd4621f",
@@ -542,6 +547,24 @@
             "markers": "python_version >= '3.6'",
             "version": "==1.0.1"
         },
+        "future": {
+            "hashes": [
+                "sha256:929292d34f5872e70396626ef385ec22355a1fae8ad29e1a734c3e43f9fbc216",
+                "sha256:bd2968309307861edae1458a4f8a4f3598c03be43b97521076aebf5d94c07b05"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "version": "==1.0.0"
+        },
+        "geomet": {
+            "hashes": [
+                "sha256:4372fe4e286a34acc6f2e9308284850bd8c4aa5bc12065e2abbd4995900db12f",
+                "sha256:51e92231a0ef6aaa63ac20c443377ba78a303fd2ecd179dc3567de79f3c11605"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.7'",
+            "version": "==1.1.0"
+        },
         "giftless-client": {
             "hashes": [
                 "sha256:2b810764c9a5b112a533db4f05e7cef1a3b760a52117cb2ee99a18667d9968ca",
@@ -638,6 +661,13 @@
             ],
             "markers": "python_version < '3.9'",
             "version": "==6.4.0"
+        },
+        "isodate": {
+            "hashes": [
+                "sha256:0751eece944162659049d35f4f549ed815792b38793f07cf73381c1c87cbed96",
+                "sha256:48c5881de7e8b0a0d648cb024c8062dc84e7b840ed81e864c7614fd3c127bde9"
+            ],
+            "version": "==0.6.1"
         },
         "itsdangerous": {
             "hashes": [
@@ -1244,6 +1274,15 @@
             "index": "pypi",
             "markers": "python_version >= '3.6'",
             "version": "==6.0"
+        },
+        "rdflib": {
+            "hashes": [
+                "sha256:0438920912a642c866a513de6fe8a0001bd86ef975057d6962c79ce4771687cd",
+                "sha256:9995eb8569428059b8c1affd26b25eac510d64f5043d9ce8c84e0d0036e995ae"
+            ],
+            "index": "pypi",
+            "markers": "python_full_version >= '3.8.1' and python_full_version < '4.0.0'",
+            "version": "==7.0.0"
         },
         "redis": {
             "hashes": [
@@ -3183,10 +3222,10 @@
         },
         "pydevd-pycharm": {
             "hashes": [
-                "sha256:54f72590b8052e22a30d5360be6aaca036e8007eedbbe91e03ac502a4dbb4606"
+                "sha256:3bde29dde226ded3c5baeda1d47e1150cdc9cab94142fc0a85e178fd35942d81"
             ],
             "index": "pypi",
-            "version": "==242.20224.25"
+            "version": "==242.20224.86"
         },
         "pyfakefs": {
             "hashes": [
