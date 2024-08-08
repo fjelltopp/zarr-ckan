@@ -31,7 +31,6 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
             'blob_storage_resource_filename': blobstorage_helpers.resource_filename,
             'get_facet_items_dict': zarr_helpers.get_facet_items_dict,
             'get_all_groups': zarr_helpers.get_all_groups,
-            'get_featured_datasets': zarr_helpers.get_featured_datasets,
             'get_user_from_id': zarr_helpers.get_user_from_id,
             'get_user_obj': zarr_helpers.get_user_obj,
             'month_formatter': zarr_helpers.month_formatter,
