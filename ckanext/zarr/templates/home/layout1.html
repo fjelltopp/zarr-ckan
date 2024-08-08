@@ -1,0 +1,28 @@
+{% ckan_extends %}
+
+{% block title %}{{ _('Featured data') }}{% endblock %}
+{% block first_row_title %}{{ _('Featured datasets') }}{% endblock %}
+{% block second_row_title %}{{ _('Recently updated datasets') }}{% endblock %}
+{% set topics = [
+    {"title": "Topic 1", "url": "#" },
+    {"title": "Topic 2", "url": "#" },
+    {"title": "Topic 3", "url": "#" },
+    {"title": "Topic 4", "url": "#" },
+    {"title": "Topic 5", "url": "#" },
+    {"title": "Topic 6", "url": "#" },
+    {"title": "Topic 7", "url": "#" },
+    {"title": "Topic 8", "url": "#" },
+] %}
+
+{% block groups %}
+<div class="topics-background">
+    <div class="container">
+        <h1>{{ _('Find data by topic') }}</h1>
+        <ul class="topics">
+            {% for topic in topics %}
+            <li><a href="{{ topic.url }}"><p class="topic-top-square"></p><p class="topic-link">{{ _(topic.title) }}</p></a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

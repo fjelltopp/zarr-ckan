@@ -2,6 +2,7 @@ import ckan.logic as logic
 import ckan.model as model
 from ckan.common import c, request, is_flask_request, g
 from datetime import datetime, timedelta
+from ckan.plugins import toolkit
 
 
 def get_user_obj(field=""):
@@ -91,15 +92,6 @@ def get_all_groups():
             data_dict={'sort': 'title asc', 'all_fields': True})
 
 
-def get_featured_datasets():
-    featured_datasets = logic.get_action('package_search')(
-        data_dict={'fq': 'tags:featured', 'sort': 'metadata_modified desc', 'rows': 3})['results']
-    recently_updated = logic.get_action('package_search')(
-        data_dict={'q': '*:*', 'sort': 'metadata_modified desc', 'rows': 3})['results']
-    datasets = featured_datasets + recently_updated
-    return datasets[:3]
-
-
 def get_user_from_id(userid):
     user_show_action = logic.get_action('user_show')
     user_info = user_show_action({}, {"id": userid})
@@ -127,3 +119,4 @@ def lower_formatter(input):
 
 def month_formatter(month):
     return datetime.strptime(month, "%Y-%m").strftime("%b %Y")
+

@@ -1,2 +1,145 @@
 /* This file overwrites css from the base ckan theme */
+.homepage .promoted-background {
+    background: url("/images/zarr_bg.png") no-repeat center center;
+    background-size: cover;
+}
+
+.homepage .promoted-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 72px);
+    height: 100%;
+    background: url("/images/zarr_bg_transparent_layer.png") no-repeat center center;
+    background-size: auto 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.homepage .promoted-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 72px;
+    height: 100%;
+    background: url("/images/3colors.png") no-repeat center center;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 1;
+
+}
+
+.promoted-background {
+    background-color: #13240F;
+}
+
+.promoted-container {
+    position: relative;
+    z-index: 2;
+}
+
+.recently-updated .view-all-btn {
+    background: none;
+}
+
+.subscribe .register {
+    color: white;
+    background-color: #13240F;
+    border: white thin solid;
+}
+
+.footer-search-section .lens-btn {
+    background-color: white;
+    border: inherit;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.footer-search-section .search-label {
+    display: none !important;
+}
+
+.footer-search-section #field-giant-search {
+    max-width: 371px;
+}
+
+.topics-background {
+    margin-top: 48px;
+    margin-bottom: 64px;
+    background-color: white;
+}
+
+.topics-background H1:first-child {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.04em;
+    text-align: left;
+}
+
+.topics-background .container {
+    width: 100%;
+}
+
+
+.topics {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.topics li:last-child {
+    margin-right: 0;
+}
+
+.topics li {
+    display: inline flex;
+    margin-right: 21px;
+    margin-top: 24px;
+    width: 124px;
+    height: 96px;
+    border: #EBF1EA solid thin;
+    border-radius: 4px;
+}
+
+.topics li a {
+    margin: 16px;
+    width: 92px;
+    height: 64px;
+}
+
+.topics li a .topic-top-square {
+    background-color: #DFF0DB;
+    width: 40px;
+    height: 40px;
+    margin-left: 26px;
+    margin-right: 26px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+
+.topics li a .topic-link {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #13240F;
+}
+
+.fa-search {
+    color: #198A00;
+}
+
+.big-search-form .lens-btn {
+    background-color: white;
+    padding-right: 14px;
+    padding-left: 14px;
+}
+
+.badge {
+    color: #EF7D00;
+}
 
