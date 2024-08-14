@@ -2,8 +2,13 @@ zarr-theme:
   filter: cssrewrite
   output: zarr/%(version)s-zarr.css
   contents:
-    - css/source-sans-3VF.css
     - css/zarr.css
+
+zarr-theme-palette:
+  filter: cssrewrite
+  output: zarr/%(version)s-zarr.css
+  contents:
+    - css/zarr_palette.css
 
 FileInputComponentStyles:
     contents:

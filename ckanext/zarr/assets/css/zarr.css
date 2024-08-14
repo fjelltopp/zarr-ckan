@@ -139,7 +139,7 @@
     padding-left: 14px;
 }
 
-.badge {
-    color: #EF7D00;
+.dataset-resources li a.badge, .dataset-resources li a.badge:hover {
+    color: #EF7D00 !important;
 }
 
