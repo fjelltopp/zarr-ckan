@@ -13,3 +13,4 @@
 build/
 util/demo_data_loader/prod_config.json
 util/demo_data_loader/dev_config.json
+.npm/
