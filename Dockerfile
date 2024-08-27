@@ -11,12 +11,6 @@ ENV PATH=${CKAN_VENV}/bin:${PATH}
 
 RUN /usr/lib/ckan/bootstrap.sh
 
-RUN cd /usr/lib/ckan/ckanext-zarr/ckanext/zarr/react/ && \
-    nvm install && \
-    nvm use && \
-    npm install && \
-    npm run build
-
 ENTRYPOINT ["/usr/lib/ckan/ckan-entrypoint.sh"]
 #USER ckan
 EXPOSE 5000
