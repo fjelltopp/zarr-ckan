@@ -133,6 +133,14 @@
     color: #198A00;
 }
 
+#dataset-search-form .btn-default:hover > .fa-search {
+    color: #198A00;
+}
+
+#dataset-search-form .btn-default > .fa-search {
+    color: #DFF0DB;
+}
+
 .big-search-form .lens-btn {
     background-color: white;
     padding-right: 14px;
