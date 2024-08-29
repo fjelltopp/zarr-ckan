@@ -2,8 +2,6 @@
 
 # Build React components
 cd /usr/lib/ckan/ckanext-zarr/ckanext/zarr/react/ && \
-    nvm install && \
-    nvm use && \
     npm install && \
     npm run build
 
