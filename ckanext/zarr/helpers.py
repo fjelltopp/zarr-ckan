@@ -3,6 +3,7 @@ import ckan.model as model
 from ckan.common import c, request, is_flask_request, g
 from datetime import datetime, timedelta
 from ckan.plugins import toolkit
+import html
 
 
 def get_user_obj(field=""):
@@ -119,4 +120,3 @@ def lower_formatter(input):
 
 def month_formatter(month):
     return datetime.strptime(month, "%Y-%m").strftime("%b %Y")
-

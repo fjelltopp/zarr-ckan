@@ -10,6 +10,7 @@ from string import ascii_lowercase
 from random import choice
 import copy
 import slugify
+import datetime
 
 
 @scheming_validator
@@ -100,4 +101,18 @@ def isomonth(field, schema):
                 month_formatter(data[key])
             except ValueError:
                 raise ValidationError({'name': [_('Month should be of the form yyyy-mm')]})
+    return validator
+
+
+@scheming_validator
+def date_validator(field, schema):
+    def validator(key, data, errors, context):
+        value = data.get(key)
+        if value:
+            try:
+                date = datetime.datetime.strptime(value, '%Y-%m-%d').date()
+                if date > datetime.date.today():
+                    errors[key].append(_("Date cannot be in the future"))
+            except ValueError:
+                errors[key].append(_("Invalid date format. Please use YYYY-MM-DD"))
     return validator

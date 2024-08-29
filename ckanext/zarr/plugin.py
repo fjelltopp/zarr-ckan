@@ -33,7 +33,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
             'get_all_groups': zarr_helpers.get_all_groups,
             'get_user_from_id': zarr_helpers.get_user_from_id,
             'get_user_obj': zarr_helpers.get_user_obj,
-            'month_formatter': zarr_helpers.month_formatter,
+            'month_formatter': zarr_helpers.month_formatter
         }
 
     # IConfigurer
@@ -74,7 +74,8 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
             'autogenerate_name_from_title': zarr_validators.autogenerate_name_from_title,
             'autofill': zarr_validators.autofill,
             'autogenerate': zarr_validators.autogenerate,
-            'isomonth': zarr_validators.isomonth
+            'isomonth': zarr_validators.isomonth,
+            'date_validator': zarr_validators.date_validator
         }
 
     # IPackageContoller
