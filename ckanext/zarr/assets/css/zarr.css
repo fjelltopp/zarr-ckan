@@ -243,3 +243,47 @@
 .package-read .module-content {
    margin-top: 36px;
 }
+
+/* about */
+.zarr-about {
+    line-height: 1.6;
+    color: var(--primary);
+    text-align: justify;
+}
+
+.zarr-about h3 strong {
+    font-weight: 700;
+    padding-bottom: 24px;
+}
+
+.zarr-about h3 {
+    font-weight: 400;
+    color: var(--primary);
+    border-bottom: 1px solid var(--secondary);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    font-size: 17px;
+}
+
+.zarr-about h4 {
+    color: var(--secondary);
+    margin-top: 36px;
+    font-size: 18px;
+}
+
+.zarr-about p {
+    margin-bottom: 15px;
+}
+
+.zarr-about ul {
+    padding-left: 20px;
+}
+
+.zarr-about .contact {
+    background-color: var(--primary10);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: var(--primary);
+}
+/* about */
