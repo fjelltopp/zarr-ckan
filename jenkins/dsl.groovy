@@ -88,6 +88,11 @@ pipelineJob("CKAN-deploy") {
             credentials('jenkins_github_ssh')
             name('origin')
           }
+          extensions {
+            submoduleOptions {
+              parentCredentials(true)
+            }
+          }
           scriptPath('jenkinsfiles/zarr_deploy.groovy')
           branch("remotes/origin/master")
         }
