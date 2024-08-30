@@ -143,12 +143,24 @@
     color: var(--secondary);
 }
 
-#dataset-search-form .btn-default:hover > .fa-search {
-    color: var(--secondary);
+#dataset-search-form .btn-default:hover > .fa-search,
+#organization-datasets-search-form .btn-default:hover > .fa-search,
+#organization-search-form .btn-default:hover > .fa-search,
+#group-search-form .btn-default:hover > .fa-search {
+    color: #198A00;
 }
 
-#dataset-search-form .btn-default > .fa-search {
-    color: var(--background);
+#dataset-search-form .btn-default > .fa-search,
+#organization-datasets-search-form .btn-default > .fa-search,
+#organization-search-form .btn-default > .fa-search,
+#group-search-form .btn-default > .fa-search {
+    color: #DFF0DB;
+}
+
+.big-search-form .lens-btn {
+    background-color: white;
+    padding-right: 14px;
+    padding-left: 14px;
 }
 
 .dataset-resources li a.badge, .dataset-resources li a.badge:hover {
@@ -299,3 +311,42 @@
     margin-top: 20px;
     color: var(--primary);
 }
+/* about */
+
+/* misc */
+.dev-banner {
+    background-color: var(--primary);
+}
+
+@media only screen and (min-width: 628px) {
+    ul li.dev-banner a {
+        margin-left: 0 !important;
+        background-color: var(--primary) !important;
+    }
+}
+
+.module-heading {
+    background-color: var(--primary10);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    --bs-table-accent-bg: var(--primary10);
+}
+
+.dataset-heading .bg-secondary, .dataset-private.badge.badge-inverse.pull-right {
+    background-color: var(--primary65) !important; /* original is :important as well */
+    box-shadow: 0 0 0 1px rgba(25, 138, 0, 0.6);
+}
+
+.dataset-resources li  {
+    box-shadow: 0 0 0 1px rgba(255, 165, 0, 0.4);
+}
+
+.editor .editor-info-block {
+    background-color: var(--primary10);
+}
+
+.stages li {
+    background-color: var(--primary10);
+}
+/* misc */
