@@ -116,28 +116,28 @@ dataset_fields:
   label: Resource Type
   preset: select
   choices:
-  - value: "dataset"
-    label: Dataset
-  - value: "document"
-    label: Document
-  - value: "image"
-    label: Image
-  - value: "audio"
+  - value: "sound"
     label: Audio
-  - value: "video"
-    label: Video
-  - value: "software"
-    label: Software
-  - value: "service"
-    label: Service
   - value: "collection"
     label: Collection
+  - value: "dataset"
+    label: Dataset
+  - value: "text"
+    label: Document
   - value: "event"
     label: Event
+  - value: "still_image"
+    label: Image
   - value: "interactive_resource"
     label: Interactive Resource
   - value: "physical_object"
     label: Physical Object
+  - value: "service"
+    label: Service
+  - value: "software"
+    label: Software
+  - value: "moving_image"
+    label: Video
   - value: "other"
     label: Other
   help_text: The nature or genre of the resource.
