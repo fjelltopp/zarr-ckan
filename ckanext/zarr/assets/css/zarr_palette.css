@@ -29,9 +29,6 @@
     /* promoted background color */
     --promoted-background-color: #13240F;
     /* insights */
-    --show-insights-title-display: none;  /* set to block to show */
-    --upper-container-display: none;  /* set to flex to show */
-    --upper-container-display-mobile: none; /* set to block to show */
     --lower-container-display: flex;  /* set to flex to show */
     --after-insights-min-height: 400px;
     /* masthead */
