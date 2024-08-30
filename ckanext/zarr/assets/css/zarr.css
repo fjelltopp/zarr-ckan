@@ -31,6 +31,21 @@
 
 }
 
+.homepage .hero .insights figure {
+    margin-top: 20px;
+    width: 560px;
+    max-width: 100%;
+}
+
+.homepage .hero .insights figure iframe {
+    width: 100%;
+}
+
+.homepage .hero .insights figcaption {
+    margin-left: 15px;
+    width: 90%;
+}
+
 .promoted-background {
     background-color: #13240F;
 }
