@@ -1,7 +1,7 @@
 scheming_version: 2
 dataset_type: dataset
-about: A schema for ZaRR CKAN that includes Dublin Core Elements and extended elements for FAIR principles
-about_url: http://github.com/ckan/ckanext-scheming
+about: Dublin Core Metdata Element v1.1 schema
+about_url: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
 
 dataset_fields:
 
@@ -13,27 +13,27 @@ dataset_fields:
   label: Title
   preset: title
   required: true
-  form_placeholder: eg. A descriptive title
+  form_placeholder: A name given to the dataset
   display_group: Overview
 
 - field_name: name
   label: URL
   preset: dataset_slug
   required: true
-  form_placeholder: eg. my-dataset
+  form_placeholder: An unambiguous reference to the dataset. Recommended practice is to use the automatically generated identifiers.
   display_group: Overview
 
 - field_name: notes
   label: Description
   required: true
   form_snippet: markdown.html
-  form_placeholder: Please provide a detailed description of the dataset.
+  form_placeholder: "An account of the dataset. The description may include but is not limited to: an abstract, a table of contents or a free-text account of the dataset."
   display_group: Overview
 
 - field_name: tag_string
-  label: Keywords
+  label: Subject
   preset: tag_string_autocomplete
-  form_placeholder: eg. economy, mental health, government
+  form_placeholder: The topic of the dataset, e.g. economy, mental health, government
   required: true
   display_group: Overview
 
@@ -51,9 +51,8 @@ dataset_fields:
 
 
 - start_form_page:
-    title: Dublin Core Elements
-    description: Metadata elements based on the Dublin Core Elements standard
-
+    title: Metadata
+    description: Dublin Core Metdata Elements (excluding those already captured)
 
   field_name: creator
   label: Creator
@@ -65,8 +64,8 @@ dataset_fields:
     - field_name: email
       label: Email
       display_snippet: email.html
-  help_text: An entity primarily responsible for making the dataset.
-  display_group: Dublin Core Elements
+  help_text: An entity primarily responsible for making the dataset. Examples of a Creator include a person, an organization, or a service.
+  display_group: Metadata
   validators: ignore_missing
 
 - field_name: contributor
@@ -79,8 +78,8 @@ dataset_fields:
     - field_name: email
       label: Email
       display_snippet: email.html
-  help_text: An entity responsible for making contributions to the dataset.
-  display_group: Dublin Core Elements
+  help_text: An entity responsible for making contributions to the dataset. Examples of a Contributor include a person, an organization, or a service.
+  display_group: Metadata
   validators: ignore_missing
 
 - field_name: publisher
@@ -88,8 +87,6 @@ dataset_fields:
   repeating_label: Publisher
   repeating_once: true
   repeating_subfields:
-    - field_name: uri
-      label: URI
     - field_name: name
       label: Name
     - field_name: email
@@ -98,19 +95,9 @@ dataset_fields:
     - field_name: url
       label: URL
       display_snippet: link.html
-    - field_name: type
-      label: Type
-  help_text: Entity responsible for making the dataset available.
-  display_group: Dublin Core Elements
+  help_text: Entity responsible for making the dataset available. Examples of a Publisher include a person, an organization, or a service.
+  display_group: Metadata
   validators: ignore_missing
-
-
-- field_name: date
-  label: Date
-  preset: date
-  help_text: A point or period of time associated with an event in the lifecycle of the resource.
-  display_group: Dublin Core Elements
-  validators: ignore_missing date_validator
 
 - field_name: resource_type
   label: Resource Type
@@ -140,36 +127,15 @@ dataset_fields:
     label: Video
   - value: "other"
     label: Other
-  help_text: The nature or genre of the resource.
-  display_group: Dublin Core Elements
-  validators: ignore_missing
-
-- field_name: format
-  label: Format
-  preset: resource_format_autocomplete
-  help_text: The file format, physical medium, or dimensions of the resource.
-  display_group: Dublin Core Elements
-  validators: ignore_missing
-
-- field_name: identifier
-  label: Identifier
-  form_placeholder: e.g., DOI, ISBN, ISSN
-  help_text: An unambiguous reference to the resource within a given context.
-  display_group: Dublin Core Elements
+  help_text: The nature or genre of the dataset.
+  display_group: Metadata
   validators: ignore_missing
 
 - field_name: rights
   label: Rights
   form_snippet: markdown.html
-  help_text: Information about rights held in and over the resource.
-  display_group: Dublin Core Elements
-  validators: ignore_missing
-
-- field_name: source
-  label: Source
-  form_snippet: markdown.html
-  help_text: A related resource from which the described resource is derived.
-  display_group: Dublin Core Elements
+  help_text: Information about rights held in and over the dataset. Typically, rights information includes a statement about various property rights associated with the dataset, including intellectual property rights.
+  display_group: Metadata
   validators: ignore_missing
 
 - field_name: language
@@ -193,9 +159,26 @@ dataset_fields:
   - value: other
     label: Other
   form_placeholder: The language(s) of the dataset
-  help_text: A language of the resource.
-  display_group: Dublin Core Elements
+  help_text: A language of the dataset.
+  display_group: Metadata
   default: en
+
+- field_name: source
+  label: Source
+  repeating_label: Source
+  repeating_once: true
+  repeating_subfields:
+    - field_name: name
+      label: Name
+    - field_name: notes
+      label: Notes
+    - field_name: URL
+      label: URL
+    - field_name: Identifier
+      label: Identifier
+  help_text: Any related source. Recommended practice is to identify the related source by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided, e.g. DOI.
+  display_group: Metadata
+  validators: ignore_missing
 
 - field_name: relation
   label: Relation
@@ -204,101 +187,37 @@ dataset_fields:
   repeating_subfields:
     - field_name: name
       label: Name
-  help_text: A related resource.
-  display_group: Dublin Core Elements
+    - field_name: notes
+      label: Notes
+    - field_name: URL
+      label: URL
+    - field_name: Identifier
+      label: Identifier
+  help_text: Any related source. Recommended practice is to identify the related source by means of a URL. If this is not possible or feasible, a string conforming to a formal identification system may be provided, e.g. DOI.
+  display_group: Metadata
   validators: ignore_missing
 
 - field_name: spatial_coverage
   label: Spatial coverage
   repeating_subfields:
-    - field_name: uri
-      label: URI
-    - field_name: text
-      label: Label
-    - field_name: geom
-      label: Geometry
-    - field_name: bbox
-      label: Bounding Box
-    - field_name: centroid
-      label: Centroid
+    - field_name: name
+      label: Geographic Region
   help_text: A geographic region that is covered by the dataset.
-  display_group: Dublin Core Elements
+  display_group: Metadata
   validators: ignore_missing
 
 - field_name: temporal_start
   label: Temporal Start Date
   preset: date
-  help_text: For time series data, this should be the earliest date reported in the data.
-  display_group: Dublin Core Elements
+  help_text: The start of the time period covered by this data. For time series data, this should be the earliest date reported in the data.
+  display_group: Metadata
   validators: ignore_missing date_validator
 
 - field_name: temporal_end
   label: Temporal End Date
   preset: date
-  help_text: For time series data, this should be the latest date reported in the data. Leave blank if dataset has an indefinite end.
-  display_group: Dublin Core Elements
-  validators: ignore_missing
-
-- field_name: subject
-  label: Subject
-  repeating_label: Subject
-  repeating_once: true
-  repeating_subfields:
-    - field_name: name
-      label: Name
-  help_text: The topic of the resource.
-  display_group: Dublin Core Elements
-  validators: ignore_missing
-
-- start_form_page:
-    title: Extended Attributes
-    description: Extra fields for detailed metadata
-
-  field_name: data_standard
-  label: Data Standard
-  preset: tag_string_autocomplete
-  form_placeholder: eg. DCAT, Dublin Core, ISO 19115
-  help_text: The metadata standards or schemas used for this dataset. Add multiple standards separated by commas.
-  display_group: Extended Attributes
-  validators: ignore_missing
-
-- field_name: provenance
-  label: Provenance
-  form_snippet: markdown.html
-  help_text: Detailed information about the origin and processing history of the dataset
-  display_group: Extended Attributes
-  validators: ignore_missing
-
-- field_name: quality_indicator
-  label: Quality Indicator
-  preset: select
-  choices:
-  - value: "1"
-    label: 1 star
-  - value: "2"
-    label: 2 stars
-  - value: "3"
-    label: 3 stars
-  - value: "4"
-    label: 4 stars
-  - value: "5"
-    label: 5 stars
-  help_text: Indicator of the dataset's quality or reliability based on a 5-star rating system.
-  display_group: Extended Attributes
-  validators: ignore_missing
-
-- field_name: quality_comment
-  label: Quality Details
-  form_snippet: markdown.html
-  help_text: Additional details about the quality assessment of this dataset.
-  display_group: Extended Attributes
-  validators: ignore_missing
-
-- field_name: preservation_statement
-  label: Preservation Statement
-  form_snippet: markdown.html
-  help_text: Information about long-term preservation plans for this dataset
-  display_group: Extended Attributes
+  help_text: The end of the time period covered by this data. For time series data, this should be the latest date reported in the data. Leave blank if dataset has an indefinite end.
+  display_group: Metadata
   validators: ignore_missing
 
 resource_fields:
@@ -306,60 +225,15 @@ resource_fields:
 - field_name: name
   label: Name
   form_placeholder:
-  help_text: A descriptive title for the resource.
+  help_text: A name given to the resource.
 
 - field_name: description
   label: Description
   form_snippet: markdown.html
-  help_text: A free-text account of the resource.
+  help_text: An account of the resource.
 
 - field_name: format
   label: Format
   preset: resource_format_autocomplete
-  help_text: File format. If not provided it will be guessed.
-
-- field_name: availability
-  label: Availability
-  help_text: Indicates how long it is planned to keep the resource available.
-
-- field_name: data_standard
-  label: Data Standard
-  preset: tag_string_autocomplete
-  form_placeholder: eg. DCAT, Dublin Core, ISO 19115
-  help_text: The metadata standards or schemas used for this dataset. Add multiple standards separated by commas.
-  display_group: Additional Metadata
-
-- field_name: provenance
-  label: Provenance
-  form_snippet: markdown.html
-  help_text: Detailed information about the origin and processing history of the dataset
-  display_group: Additional Metadata
-
-- field_name: quality_indicator
-  label: Quality Indicator
-  preset: select
-  choices:
-  - value: "1"
-    label: 1 star
-  - value: "2"
-    label: 2 stars
-  - value: "3"
-    label: 3 stars
-  - value: "4"
-    label: 4 stars
-  - value: "5"
-    label: 5 stars
-  help_text: Indicator of the dataset's quality or reliability based on a 5-star rating system.
-  display_group: Additional Metadata
-
-- field_name: quality_comment
-  label: Quality Details
-  form_snippet: markdown.html
-  help_text: Additional details about the quality assessment of this dataset.
-  display_group: Additional Metadata
-
-- field_name: preservation_statement
-  label: Preservation Statement
-  form_snippet: markdown.html
-  help_text: Information about long-term preservation plans for this dataset
-  display_group: Additional Metadata
+  help_text: The file format of the resource. If not provided it will be guessed.
+  
