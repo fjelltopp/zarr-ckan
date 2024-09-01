@@ -3,20 +3,180 @@
       {
         "users": [
           {
+            "name": "mofnp_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Ministry of Finance and National Planning",
+        "description": "Government of the Republic of Zambia Ministry of Finance and National Planning",
+        "image_url": "https://www.mofnp.gov.zm/wp-content/uploads/2022/05/logo.fw_-4-768x105.png",
+        "name": "mofnp",
+        "state": "active",
+        "title": "Ministry of Finance and National Planning"
+      },
+      {
+        "users": [
+          {
+            "name": "moh_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Ministry of Health",
+        "description": "Government of the Republic of Zambia Ministry of Health",
+        "image_url": "https://www.moh.gov.zm/wp-content/uploads/2021/10/log_moh.gif",
+        "name": "moh",
+        "state": "active",
+        "title": "Ministry of Health"
+      },
+      {
+        "users": [
+          {
+            "name": "medu_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Ministry of Education",
+        "description": "Government of the Republic of Zambia Ministry of Education",
+        "image_url": "https://www.edu.gov.zm/wp-content/uploads/2024/06/edu-loogo2-e1718996036101.png",
+        "name": "medu",
+        "state": "active",
+        "title": "Ministry of Education"
+      },
+      {
+        "users": [
+          {
+            "name": "zamstats_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Zambia Statistics Agency",
+        "description": "Government of the Republic of Zambia Statistics Agency",
+        "image_url": "https://www.zamstats.gov.zm/wp-content/uploads/2023/11/logo.jpg",
+        "name": "zamstats",
+        "state": "active",
+        "title": "Zambia Statistics Agency"
+      },
+      {
+        "users": [
+          {
+            "name": "smart_zambia_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Smart Zambia Institute",
+        "description": "Government of the Republic of Zambia Smart Zambia Institute",
+        "image_url": "https://www.szi.gov.zm/wp-content/uploads/2022/01/logoszi_2.png",
+        "name": "smart_zambia",
+        "state": "active",
+        "title": "Smart Zambia Institute"
+      },
+      {
+        "users": [
+          {
+            "name": "zipar_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Zambia Institute of Policy Analysis and Research",
+        "description": "Zambia Institute of Policy Analysis and Research (ZIPAR)",
+        "image_url": "https://www.zipar.org.zm/wp-content/uploads/2023/10/logo.png",
+        "name": "zipar",
+        "state": "active",
+        "title": "Zambia Institute of Policy Analysis and Research"
+      },
+      {
+        "users": [
+          {
+            "name": "nisir_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "National Institute for Scientific and Industrial Research",
+        "description": "Zambia National Institute for Scientific and Industrial Research (NISIR)",
+        "image_url": "https://nisir.org.zm/wp-content/uploads/2020/07/cropped-WhatsApp_Image_2023-05-17_at_14.42.05-removebg-preview-1.png",
+        "name": "nisir",
+        "state": "active",
+        "title": "National Institute for Scientific and Industrial Research"
+      },
+      {
+        "users": [
+          {
+            "name": "uoz_library_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "University of Zambia Library",
+        "description": "University of Zambia Library",
+        "image_url": "https://www.unza.zm/themes/unza/logo.svg",
+        "name": "uoz_library",
+        "state": "active",
+        "title": "University of Zambia Library"
+      },
+      {
+        "users": [
+          {
+            "name": "zamren_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Zambia Research and Education Network",
+        "description": "Zambia Research and Education Network (ZAMREN)",
+        "image_url": "https://zamren.zm/wp-content/uploads/2020/05/cropped-ZAMREN_LOGO-clear-B-3-2.png",
+        "name": "zamren",
+        "state": "active",
+        "title": "Zambia Research and Education Network"
+      },
+      {
+        "users": [
+          {
+            "name": "nhra_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "National Health Research Authority",
+        "description": "Zambia National Health Research Authority (NHRA)",
+        "image_url": "https://images.squarespace-cdn.com/content/v1/5a76debf2aeba5bf135a4ea0/b94ab9fb-aa44-41c0-8a42-219c554cde00/updated+logo%281%29.jpg?format=500w",
+        "name": "nhra",
+        "state": "active",
+        "title": "National Health Research Authority"
+      },
+      {
+        "users": [
+          {
+            "name": "saipar_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Southern African Institute for Policy and Research",
+        "description": "Southern African Institute for Policy and Research",
+        "image_url": "http://saipar.org/wp-content/uploads/2013/09/SAIPAR-Logo.jpg",
+        "name": "saipar",
+        "state": "active",
+        "title": "Southern African Institute for Policy and Research"
+      },
+      {
+        "users": [
+          {
+            "name": "unicef_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "UNICEF Zambia Office",
+        "description": "UNICEF Zambia Office",
+        "image_url": "https://www.unicef.org/zambia/sites/unicef.org.zambia/files/styles/logo/public/English_3.png.webp?itok=ou73WwWZ",
+        "name": "unicef",
+        "state": "active",
+        "title": "UNICEF Zambia Office"
+      },
+      {
+        "users": [
+          {
             "name": "fjelltopp_admin",
             "capacity": "admin"
-          },
-          {
-            "name": "fjelltopp_editor",
-            "capacity": "editor"
-          },
-          {
-            "name": "fjelltopp_member",
-            "capacity": "member"
           }
         ],
         "display_name": "Fjelltopp",
-        "description": "Fjelltopp demo organization",
+        "description": "Fjelltopp are the service provider delivering the Zambia Research and Evaluation Repository",
         "image_url": "https://www.fjelltopp.org/templates/fjelltopp/images/navbar.png",
         "name": "fjelltopp",
         "state": "active",

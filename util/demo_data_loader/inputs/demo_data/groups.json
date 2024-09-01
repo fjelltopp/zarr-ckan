@@ -2,151 +2,157 @@
     "groups": [
       {
         "users": [
-          {
-            "name": "test_admin",
+            {
+            "name": "fjelltopp_admin",
             "capacity": "admin"
-          },
-          {
-            "name": "test_editor",
-            "capacity": "editor"
-          },
-          {
-            "name": "test_member",
-            "capacity": "member"
-          }
+            }
         ],
-        "display_name": "Publication",
-        "description": "Department publications and research studies",
-        "image_url": "https://dms.hiv.health.gov.mw/uploads/group/2022-03-17-123757.433896243660articlesquareicon.png",
-        "name": "publication",
+        "display_name": "Collection",
+        "description": "An aggregation of resources. A collection is described as a group; its parts may also be separately described.",
+        "image_url": "",
+        "name": "collection",
         "state": "active",
-        "title": "Publication"
-      }, {
+        "title": "Collection"
+      },
+      {
         "users": [
           {
-            "name": "test_admin",
+            "name": "fjelltopp_admin",
             "capacity": "admin"
-          },
-          {
-            "name": "test_editor",
-            "capacity": "editor"
-          },
-          {
-            "name": "test_member",
-            "capacity": "member"
           }
         ],
-        "display_name": "Guideline",
-        "description": "Guidelines for health service staff",
-        "image_url": "https://dms.hiv.health.gov.mw/uploads/group/2022-03-17-123643.7336343533402businessmanagementplanprojectreporticon.png",
-        "name": "guideline",
+        "display_name": "Dataset",
+        "description": "Data encoded in a defined structure. Examples include lists, tables, and databases. A dataset may be useful for direct machine processing.",
+        "image_url": "",
+        "name": "dataset",
         "state": "active",
-        "title": "Guideline"
-      }, {
+        "title": "Dataset"
+      },
+      {
         "users": [
           {
-            "name": "test_admin",
+            "name": "fjelltopp_admin",
             "capacity": "admin"
-          },
-          {
-            "name": "test_editor",
-            "capacity": "editor"
-          },
-          {
-            "name": "test_member",
-            "capacity": "member"
           }
         ],
-        "display_name": "Circulars",
-        "description": "Department internal circulars and reports",
-        "image_url": "https://dms.hiv.health.gov.mw/uploads/group/2022-03-17-123603.1298852205240clusterdatagrouporganizeicon.png",
-        "name": "circular",
+        "display_name": "Event",
+        "description": "A non-persistent, time-based occurrence. Metadata for an event provides descriptive information that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event. Examples include an exhibition, webcast, conference, workshop, open day, performance, battle, trial, wedding, tea party, conflagration.",
+        "image_url": "",
+        "name": "event",
         "state": "active",
-        "title": "Circulars"
-      }, {
+        "title": "Event"
+      },
+      {
         "users": [
           {
-            "name": "test_admin",
+            "name": "fjelltopp_admin",
             "capacity": "admin"
-          },
-          {
-            "name": "test_editor",
-            "capacity": "editor"
-          },
-          {
-            "name": "test_member",
-            "capacity": "member"
           }
         ],
-        "display_name": "Data",
-        "description": "Data group for demo purposes",
-        "image_url": "https://dms.hiv.health.gov.mw//uploads/group/2022-07-24-152420.906558circular.png",
-        "name": "data",
+        "display_name": "Image",
+        "description": "A visual representation other than text. Examples include images and photographs of physical objects, paintings, prints, drawings, other images and graphics, animations and moving pictures, film, diagrams, maps, musical notation. Note that Image may include both electronic and physical representations.",
+        "image_url": "",
+        "name": "still_image",
         "state": "active",
-        "title": "Data"
-      }, {
+        "title": "Image"
+      },
+      {
         "users": [
           {
-            "name": "test_admin",
+            "name": "fjelltopp_admin",
             "capacity": "admin"
-          },
-          {
-            "name": "test_editor",
-            "capacity": "editor"
-          },
-          {
-            "name": "test_member",
-            "capacity": "member"
           }
         ],
-        "display_name": "Minutes",
-        "description": "Minutes group for demo purposes",
-        "image_url": "https://dms.hiv.health.gov.mw/uploads/group/2022-03-17-123701.0261814308050communicationconnectionmeetingofficeicon.png",
-        "name": "minutes",
+        "display_name": "Interactive Resource",
+        "description": "A resource requiring interaction from the user to be understood, executed, or experienced. Examples include forms on Web pages, applets, multimedia learning objects, chat services, or virtual reality environments.",
+        "image_url": "",
+        "name": "interactive_resource",
         "state": "active",
-        "title": "Minutes"
-      }, {
+        "title": "Interactive Resource"
+      },
+      {
         "users": [
           {
-            "name": "test_admin",
+            "name": "fjelltopp_admin",
             "capacity": "admin"
-          },
-          {
-            "name": "test_editor",
-            "capacity": "editor"
-          },
-          {
-            "name": "test_member",
-            "capacity": "member"
           }
         ],
-        "display_name": "Monitoring Tool",
-        "description": "Monitoring tool group for demo purposes",
-        "image_url": "https://dms.hiv.health.gov.mw/uploads/group/2022-03-17-123717.467925211661eyeicon.png",
-        "name": "monitoring",
+        "display_name": "Video",
+        "description": "A series of visual representations imparting an impression of motion when shown in succession. Examples include animations, movies, television programs, videos, zoetropes, or visual output from a simulation. Instances of the type Moving Image must also be describable as instances of the broader type Image.",
+        "image_url": "",
+        "name": "moving_image",
         "state": "active",
-        "title": "Monitoring Tool"
-      }, {
+        "title": "Video"
+      },
+      {
         "users": [
           {
-            "name": "test_admin",
+            "name": "fjelltopp_admin",
             "capacity": "admin"
-          },
-          {
-            "name": "test_editor",
-            "capacity": "editor"
-          },
-          {
-            "name": "test_member",
-            "capacity": "member"
           }
         ],
-        "display_name": "Plan",
-        "description": "Plan group for demo purposes",
-        "image_url": "https://dms.hiv.health.gov.mw/uploads/group/2022-03-17-123743.3695114308313economicsmarketplanstrategicstrategyicon.png",
-        "name": "plan",
+        "display_name": "Physical Object",
+        "description": "An inanimate, three-dimensional object or substance. Note that digital representations of, or surrogates for, these objects should use Image, Text or one of the other types.",
+        "image_url": "",
+        "name": "physical_object",
         "state": "active",
-        "title": "Plan"
+        "title": "Physical Object"
+      },
+      {
+        "users": [
+          {
+            "name": "fjelltopp_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Service",
+        "description": "A system that provides one or more functions. Examples include a photocopying service, a banking service, an authentication service, interlibrary loans, a Z39.50 or Web server.",
+        "image_url": "",
+        "name": "service",
+        "state": "active",
+        "title": "Service"
+      },
+      {
+        "users": [
+          {
+            "name": "fjelltopp_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Software",
+        "description": "A computer program in source or compiled form. Examples include a C source file, MS-Windows .exe executable, or Perl script.",
+        "image_url": "",
+        "name": "software",
+        "state": "active",
+        "title": "Software"
+      },
+      {
+        "users": [
+          {
+            "name": "fjelltopp_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Audio",
+        "description": "A resource primarily intended to be heard. Examples include a music playback file format, an audio compact disc, and recorded speech or sounds.",
+        "image_url": "",
+        "name": "sound",
+        "state": "active",
+        "title": "Audio"
+      },
+      {
+        "users": [
+          {
+            "name": "fjelltopp_admin",
+            "capacity": "admin"
+          }
+        ],
+        "display_name": "Document",
+        "description": "A resource consisting primarily of words for reading. Examples include books, letters, dissertations, poems, newspapers, articles, archives of mailing lists. Note that facsimiles or images of texts are still of the genre Text.",
+        "image_url": "",
+        "name": "text",
+        "state": "active",
+        "title": "Document"
       }
     ]
   }

@@ -21,7 +21,7 @@ with open(CONFIG_PATH, 'r') as config_file:
 DATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), CONFIG['data_path'])
 USERS_FILE = os.path.join(DATA_PATH, 'users.json')
 ORGANIZATIONS_FILE = os.path.join(DATA_PATH, 'organizations.json')
-DOCUMENTS_FILE = os.path.join(DATA_PATH, CONFIG['documents_file'])
+DATASETS_FILE = os.path.join(DATA_PATH, CONFIG['datasets_file'])
 GROUPS_FILE = os.path.join(DATA_PATH, CONFIG['groups_file'])
 RESOURCE_FOLDER = os.path.join(DATA_PATH, CONFIG['resource_folder'])
 
@@ -84,7 +84,7 @@ def load_users(ckan):
 
 def load_datasets(ckan, documents):
     """
-    Helper method to load datasets from the DOCUMENTS_FILE config file
+    Helper method to load datasets from the DATASETS_FILE config file
     :param ckan: ckanapi instance
     :param documents: a list of documents built from the metadata import file
     :return: None
@@ -120,7 +120,7 @@ def load_datasets(ckan, documents):
 
 def load_resources(ckan, documents):
     """
-    Helper method to load resources from the DOCUMENTS_FILE config file
+    Helper method to load resources from the DATASETS_FILE config file
     :param ckan: ckanapi instance
     :param documents: a list of documents built from the metadata import file
     :return: None
@@ -153,7 +153,7 @@ def load_resources(ckan, documents):
             _upload_resource(ckan, file_path, resource_dict)
 
 
-def load_groups(ckan, documents):
+def load_groups(ckan):
     """
     Helper method to load groups from the GROUPS_FILE config file
     :param ckan: ckanapi instance
@@ -283,7 +283,7 @@ def _create_tags(tags_str):
 
 
 def _load_documents():
-    with open(DOCUMENTS_FILE) as csvfile:
+    with open(DATASETS_FILE) as csvfile:
         metadata_reader = csv.reader(csvfile)
         start_table = False
         documents = []
