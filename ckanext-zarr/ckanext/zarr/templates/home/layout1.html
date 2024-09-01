@@ -1,0 +1,16 @@
+{% ckan_extends %}
+
+{% block title %}{{ _('Featured data') }}{% endblock %}
+{% block first_row_title %}{{ _('Featured datasets') }}{% endblock %}
+{% block second_row_title %}{{ _('Recently updated datasets') }}{% endblock %}
+
+{% block groups %}
+<div class="topics-background">
+    <div class="container">
+    <h1>{{ _('Find data by Resource Type') }}</h1>
+        {% block document_categories %}
+            {% snippet "group/snippets/group_list.html", groups=h.get_all_groups(), origin='homepage' %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

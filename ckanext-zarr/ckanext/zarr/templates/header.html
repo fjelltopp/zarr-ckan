@@ -1,0 +1,24 @@
+{% ckan_extends %}
+
+{% block header_logo %}
+    {% snippet 'snippets/header_logo.html',
+        site_title = g.site_title,
+        logo='/images/zarr_logo.png',
+        header_title='Zambia Research and<br/>Evaluation Repository' | safe %}
+{% endblock %}
+
+{% block nav_items %}
+        {% if c.userobj %}
+            {{ h.build_nav_main(
+                ('home.about', _('About')),
+                ('dataset.search', _('Find Data')),
+                ('activity.dashboard', _('My account'))
+                 ) }}
+        {% else %}
+            {{ h.build_nav_main(
+                ('home.about', _('About')),
+                ('dataset.search', _('Find Data')),
+                ('user.login', _('Log in'))
+                 ) }}
+        {% endif %}
+{% endblock %}

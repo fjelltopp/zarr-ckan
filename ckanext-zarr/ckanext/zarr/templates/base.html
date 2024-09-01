@@ -1,0 +1,8 @@
+{% ckan_extends %}
+
+{% block styles %}
+    {{ super() }}
+    {% block fjelltopp_theme_palette %}{% asset 'zarr/zarr-theme-palette' %}{% endblock %}
+    {% block fjelltopp_theme_extended %}{% endblock %}
+    {% asset 'zarr/zarr-theme' %}
+{% endblock %}
