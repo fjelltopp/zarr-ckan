@@ -1,6 +1,6 @@
 scheming_version: 2
 dataset_type: dataset
-about: Dublin Core Metdata Element v1.1 schema
+about: Dublin Core Metadata Element v1.1 schema
 about_url: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
 
 dataset_fields:
@@ -52,7 +52,7 @@ dataset_fields:
 
 - start_form_page:
     title: Metadata
-    description: Dublin Core Metdata Elements (excluding those already captured)
+    description: Dublin Core Metadata Elements (excluding those already captured)
 
   field_name: creator
   label: Creator
