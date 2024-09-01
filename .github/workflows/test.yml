@@ -1,5 +1,13 @@
 name: Tests
-on: [push, pull_request]
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -19,7 +27,7 @@ jobs:
           POSTGRES_DB: postgres
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
       redis:
-          image: redis:3
+        image: redis:3
 
     env:
       CKAN_SQLALCHEMY_URL: postgresql://ckan_default:pass@postgres/ckan_test
@@ -29,20 +37,17 @@ jobs:
       CKAN_REDIS_URL: redis://redis:6379/1
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Install requirements
-      # Install any extra requirements your extension has here (dev requirements, other extensions etc)
-      run: |
-        pip install -r requirements.txt
-        pip install -r dev-requirements.txt
-        pip install -e .
-    - name: Setup extension
-      # Extra initialization steps
-      run: |
-        # Replace default path to CKAN core config file with the one on the container
-        sed -i -e 's/use = config:.*/use = config:\/srv\/app\/src\/ckan\/test-core.ini/' test.ini
+      - uses: actions/checkout@v4
+      - name: Pipenv for Github Actions
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+          command: 'sync --dev'
+      - name: Setup extension
+        # Extra initialization steps
+        run: |
+          # Replace default path to CKAN core config file with the one on the container
+          sed -i -e 's/use = config:.*/use = config:\/srv\/app\/src\/ckan\/test-core.ini/' test.ini
 
-        ckan -c test.ini db init
-    - name: Run tests
-      run: pytest --ckan-ini=test.ini --cov=ckanext.zarr --disable-warnings ckanext/zarr
-
+          ckan -c test.ini db init
+      - name: Run tests
+        run: pytest --ckan-ini=test.ini --cov=ckanext.zarr --disable-warnings ckanext/zarr
