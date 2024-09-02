@@ -7,7 +7,7 @@ RUN rm -rf /usr/lib/ckan/ckan/ckan/pastertemplates/template/ckanext_+project_sho
 RUN cd /usr/lib/ckan/ && mkdir .venv && pipenv sync && \
     ln -s .venv venv
 RUN chown -R ckan:ckan /usr/lib/ckan/
-RUN chown -R ckan:ckan /var/lib/ckan/
+RUN chown -R ckan:root /var/lib/ckan/
 ENV PATH=${CKAN_VENV}/bin:${PATH}
 
 # USER ckan
