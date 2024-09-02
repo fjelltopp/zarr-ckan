@@ -10,7 +10,7 @@ RUN chown -R ckan:ckan /usr/lib/ckan/
 RUN chown -R ckan:ckan /var/lib/ckan/
 ENV PATH=${CKAN_VENV}/bin:${PATH}
 
-USER ckan
+# USER ckan
 RUN /usr/lib/ckan/bootstrap.sh
 
 ENTRYPOINT ["/usr/lib/ckan/ckan-entrypoint.sh"]
