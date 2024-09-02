@@ -12,7 +12,7 @@ ENV PATH=${CKAN_VENV}/bin:${PATH}
 RUN /usr/lib/ckan/bootstrap.sh
 
 ENTRYPOINT ["/usr/lib/ckan/ckan-entrypoint.sh"]
-#USER ckan
+USER ckan
 EXPOSE 5000
 CMD ${CKAN_VENV}/bin/uwsgi --ini-paste ${CKAN_CONFIG}/ckan-uwsgi.ini
 
