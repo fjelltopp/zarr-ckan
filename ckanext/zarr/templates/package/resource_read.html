@@ -1,0 +1,13 @@
+{%  ckan_extends %}
+
+{% block secondary_content %}
+
+  {% block resources_list %}
+    {% snippet "package/snippets/resources.html", pkg=pkg, active=res.id, action='read' %}
+  {% endblock %}
+
+  <tr>
+    <th scope="row"></th>
+      <td><p class="licence-space">{{ _('License') }}{% snippet "snippets/resource_license.html", pkg_dict=pkg, text_only=True %}</p></td>
+  </tr>
+{% endblock %}

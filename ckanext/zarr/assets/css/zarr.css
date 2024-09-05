@@ -349,9 +349,9 @@
 .stages li {
     background-color: var(--primary10);
 }
-/* misc */
 
-/* dataset creatrion / update styles */
+/* misc */
+/* dataset creation / update styles */
 .form-group .form-label {
     font-size: 16px;
 }
@@ -364,5 +364,13 @@
 .scheming-repeating-subfields-group .fields-removed-notice {
     font-size: 14px;
     color: var(--A11y);
+}
+
+.licence-space {
+    padding-top: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    font-size: 14px;
 }
 
