@@ -7,18 +7,21 @@
         header_title='Zambia Research and<br/>Evaluation Repository' | safe %}
 {% endblock %}
 
-{% block nav_items %}
-        {% if c.userobj %}
+{%  block nav_items_signed %}
             {{ h.build_nav_main(
+                ('organization.index', _('Organizations')),
+                ('dataset.search', _('Data')),
                 ('home.about', _('About')),
-                ('dataset.search', _('Find Data')),
-                ('activity.dashboard', _('My account'))
                  ) }}
-        {% else %}
-            {{ h.build_nav_main(
-                ('home.about', _('About')),
-                ('dataset.search', _('Find Data')),
-                ('user.login', _('Log in'))
-                 ) }}
-        {% endif %}
 {% endblock %}
+
+
+{%  block nav_items_unsigned %}
+    {{ h.build_nav_main(
+        ('organization.index', _('Organizations')),
+        ('dataset.search', _('Data')),
+        ('home.about', _('About')),
+        ('user.login', _('Log in'))
+         ) }}
+{% endblock %}
+

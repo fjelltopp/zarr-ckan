@@ -45,8 +45,9 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
     # IFacets
     def dataset_facets(self, facet_dict, package_type):
         new_fd = OrderedDict()
-        new_fd['program_area'] = plugins.toolkit._('Program Areas')
+        new_fd['organization'] = plugins.toolkit._('Organizations')
         new_fd['tags'] = plugins.toolkit._('Tags')
+        new_fd['groups'] = plugins.toolkit._('Topics')
         return new_fd
 
     # IResourceController
