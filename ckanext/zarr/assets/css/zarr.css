@@ -256,10 +256,6 @@
     margin-top: 36px;
 }
 
-.package-read .module-content {
-   margin-top: 36px;
-}
-
 @media only screen and (max-width: 1199px) {
     .desc-wide {
       display: none;

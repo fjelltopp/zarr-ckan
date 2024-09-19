@@ -3,6 +3,9 @@
     --theme: 'zarr';
     /* palette */
     --primary: #13240F;
+    --primary-rgb-red: 0;
+    --primary-rgb-green: 41;
+    --primary-rgb-blue: 32;
     --secondary: #198A00;
     --background: #DFF0DB;
     --tag: #EF7D00;
