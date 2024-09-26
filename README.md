@@ -2,7 +2,7 @@
 
 # ckanext-zarr
 
-Provides tailored styling and features for CKAN for the Zambia Evaluation and Research Repository.
+Provides tailored styling and features for CKAN for the Zambia Research and Evaluation Repository.
 
 
 ## Key features
