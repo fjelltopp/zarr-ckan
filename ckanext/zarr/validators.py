@@ -116,3 +116,12 @@ def date_validator(field, schema):
             except ValueError:
                 errors[key].append(_("Invalid date format. Please use YYYY-MM-DD"))
     return validator
+
+
+@scheming_validator
+def approval_required(field, schema):
+    def validator(key, data, errors, context):
+        value = data.get(key)
+        if value != "1":
+            errors[key].append(_(f"This field is mandatory."))
+    return validator

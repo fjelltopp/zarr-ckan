@@ -1,26 +1,15 @@
 {
     "scheming_presets_version": 1,
-    "about": "These are Scheming presets specific to WHO AFRO",
+    "about": "These are Scheming presets specific to ZaRR",
     "about_url": "http://github.com/ckan/ckanext-scheming#preset",
     "presets": [
       {
-        "preset_name": "resource_giftless_upload",
+        "preset_name": "approval",
         "values": {
-          "form_snippet": "resource_upload.html"
-        }
-      }, {
-        "preset_name": "preset_value",
-        "values": {
-          "form_snippet": "no_input.html",
-          "validators": "autofill"
-        }
-      }, {
-        "preset_name": "month",
-        "values": {
-          "form_snippet": "month.html",
-          "display_snippet": "month.html",
-          "validators": "isomonth"
+          "form_snippet": "confirm.html",
+          "display_snippet": "confirm.html",
+          "validators": "approval_required"
         }
       }
     ]
-  }
+}

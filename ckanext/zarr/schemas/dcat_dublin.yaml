@@ -49,6 +49,13 @@ dataset_fields:
   required: true
   display_group: Overview
 
+- field_name: no_pii_confirmation
+  label: No PII Confirmation
+  form_placeholder: I confirm that this dataset contains no personally identifiable information.
+  preset: approval
+  required: true
+  display_group: Overview
+
 
 - start_form_page:
     title: Metadata

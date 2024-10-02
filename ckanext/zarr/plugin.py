@@ -76,7 +76,8 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
             'autofill': zarr_validators.autofill,
             'autogenerate': zarr_validators.autogenerate,
             'isomonth': zarr_validators.isomonth,
-            'date_validator': zarr_validators.date_validator
+            'date_validator': zarr_validators.date_validator,
+            'approval_required': zarr_validators.approval_required
         }
 
     # IPackageContoller
