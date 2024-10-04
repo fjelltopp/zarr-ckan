@@ -71,4 +71,8 @@ fi
 set_environment
 echo "Running db init: ..."
 ckan --config "$CONFIG" db init
+
+echo "Running short urls db init: ..."
+ckan --config "$CONFIG" versions initdb
+ckan --config "$CONFIG" short-urls initdb
 exec "$@"
