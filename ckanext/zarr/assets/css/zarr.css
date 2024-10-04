@@ -17,20 +17,6 @@
     z-index: 1;
 }
 
-.homepage .promoted-background::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 72px;
-    height: 100%;
-    background: url("/images/3colors.png") no-repeat center center;
-    background-size: cover;
-    pointer-events: none;
-    z-index: 1;
-
-}
-
 .homepage .hero .insights figure {
     margin-top: 20px;
     width: 560px;

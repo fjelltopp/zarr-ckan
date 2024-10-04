@@ -52,3 +52,32 @@
     --breadcrumbs-font-weight: 700;
 }
 
+.flag-vertical-bars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    gap: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+.flag-bar {
+    width: 60px;
+    height: 100%;
+}
+.flag-black {
+    background: #000000;
+}
+
+.flag-red {
+    background: #EF3340;
+}
+
+.flag-orange {
+    background: #FCAD56;
+}
+
+.flag-green {
+    background: #009E49;
+}
