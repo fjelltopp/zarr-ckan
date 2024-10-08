@@ -153,7 +153,7 @@ def load_resources(ckan, documents):
             _upload_resource(ckan, file_path, resource_dict)
 
 
-def load_groups(ckan, documents):
+def load_groups(ckan):
     """
     Helper method to load groups from the GROUPS_FILE config file
     :param ckan: ckanapi instance
@@ -191,8 +191,8 @@ def load_data(ckan_url, ckan_api_key):
     documents = _load_documents()
 
     load_users(ckan)
-    orgs = load_organizations(ckan)
-    load_groups(ckan, documents)
+    load_organizations(ckan)
+    load_groups(ckan)
     load_datasets(ckan, documents)
     load_resources(ckan, documents)
 
