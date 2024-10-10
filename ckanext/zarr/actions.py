@@ -181,3 +181,20 @@ def _record_dataset_duplication(dataset_id, new_dataset_id, context):
         log.exception(e)
 
 
+def add_dataset_to_resource_type_group(resource_type, dataset_id):
+    groups_list = toolkit.get_action('group_list')({})
+    if resource_type in groups_list:
+        try:
+            toolkit.get_action('member_create')(
+                data_dict={
+                    'id': resource_type,
+                    'object': dataset_id,
+                    'object_type': 'package',
+                    'capacity': 'public'
+                }
+            )
+        except Exception as e:
+            log.error(f"Failed to add dataset {dataset_id} to group {resource_type}")
+            log.exception(e)
+    else:
+        log.warning(f"Group {resource_type} does not exist. Dataset {dataset_id} not added to any group.")

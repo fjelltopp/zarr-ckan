@@ -91,7 +91,13 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
     def after_dataset_update(self, context, data_dict):
         if data_dict.get('private'):
             zarr_upload.add_activity(context, data_dict, "changed")
+        resource_type = data_dict.get('resource_type')
+        if resource_type:
+            zarr_actions.add_dataset_to_resource_type_group(resource_type, data_dict['id'])
 
     def after_dataset_create(self, context, data_dict):
         if data_dict.get('private'):
             zarr_upload.add_activity(context, data_dict, "new")
+        resource_type = data_dict.get('resource_type')
+        if resource_type:
+            zarr_actions.add_dataset_to_resource_type_group(resource_type, data_dict['id'])
