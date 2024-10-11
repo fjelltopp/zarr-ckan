@@ -364,3 +364,15 @@
 .dataset-content > h2.dataset-heading > span.badge:not(:first-of-type) {
     margin-left: 5px !important;
 }
+
+.user-profile-page .dataset-content .dataset-heading span.badge {
+    margin-left: 5px;
+    align-self: start;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-align: inherit;
+    float: right;
+}
