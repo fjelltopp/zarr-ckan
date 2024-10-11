@@ -4,6 +4,7 @@ from ckan.common import request, g
 from datetime import datetime, timedelta
 from ckan.plugins import toolkit
 import html
+from ckanext.scheming.helpers import scheming_get_dataset_schema
 
 
 def get_user_obj(field=""):
@@ -104,3 +105,28 @@ def lower_formatter(input):
 
 def month_formatter(month):
     return datetime.strptime(month, "%Y-%m").strftime("%b %Y")
+
+
+def get_dataset_resource_type_groups(id, dataset_type='dataset'):
+    """
+    Fetch resource types from schema and cross compare with dataset affiliated groups
+    """
+    dataset = toolkit.get_action('package_show')(
+        data_dict={'id': id}
+    )
+    groups = dataset.get('groups', [])
+    if not groups:
+        return []
+    groups = [group['name'] for group in groups]
+    choices = None
+    schema = scheming_get_dataset_schema(dataset_type)
+    for field in schema['dataset_fields']:
+        if field['field_name'] == 'resource_type':
+            choices = field['choices']
+    if choices:
+        return [
+            {'label':choice['label'], 'value':choice['value']}
+            for choice in choices
+            if choice['value'] in groups
+        ]
+    return []

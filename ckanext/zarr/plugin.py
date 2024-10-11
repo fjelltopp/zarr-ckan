@@ -33,7 +33,8 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
             'get_all_groups': zarr_helpers.get_all_groups,
             'get_user_from_id': zarr_helpers.get_user_from_id,
             'get_user_obj': zarr_helpers.get_user_obj,
-            'month_formatter': zarr_helpers.month_formatter
+            'month_formatter': zarr_helpers.month_formatter,
+            'get_dataset_resource_type_groups': zarr_helpers.get_dataset_resource_type_groups
         }
 
     # IConfigurer
