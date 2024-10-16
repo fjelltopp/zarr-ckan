@@ -6,7 +6,7 @@
         <a href="{{ dataset_url }}" title="{{ title }}">
             {{title|truncate(80)}}
         </a>
-        {% set resource_types = h.get_dataset_resource_type_groups(package.id) %}
+        {% set resource_types = h.get_dataset_resource_type_groups(package.id, dataset_type='data') %}
         {% for type in resource_types %}
         <span class="badge resource-type-{{ type['value'] }}">{{ _(type['label']) }}</span>
         {% endfor %}
