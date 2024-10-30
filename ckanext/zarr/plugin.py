@@ -9,11 +9,14 @@ import ckanext.zarr.upload as zarr_upload
 import ckanext.zarr.validators as zarr_validators
 import ckanext.zarr.helpers as zarr_helpers
 from ckan.lib.plugins import DefaultPermissionLabels
+import ckan.model as model
+from sqlalchemy import func
+
 
 log = logging.getLogger(__name__)
 
 
-class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
+class ZaRRPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
 
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets, inherit=True)
@@ -22,6 +25,7 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
     plugins.implements(plugins.IActions)
     plugins.implements(plugins.IValidators)
     plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.IAuthenticator)
 
     # ITemplateHelpers
     def get_helpers(self):
@@ -102,3 +106,30 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
         resource_type = data_dict.get('resource_type')
         if resource_type:
             zarr_actions.add_dataset_to_resource_type_group(resource_type, data_dict['id'])
+
+    def authenticate(self, identity):
+        """
+        verify is email is used | different case
+        """
+        if not identity or not identity.get('login') or not identity.get('password'):
+            return None
+        login = identity.get('login')
+        password = identity.get('password')
+        query = model.Session.query(model.User).filter(
+            func.lower(model.User.email) == func.lower(login)
+        )
+        user = query.first()
+        if user and user.is_active:
+            if user.validate_password(password):
+                return user
+        return None
+
+    def identify(self):
+        pass
+
+    def login(self):
+        pass
+
+    def logout(self):
+        pass
+

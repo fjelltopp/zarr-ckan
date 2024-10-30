@@ -2,7 +2,7 @@ import pytest
 
 from ckan.tests import factories
 from ckan.tests.helpers import call_action
-from ckanext.zarr.plugin import WHOAFROPlugin
+from ckanext.zarr.plugin import ZaRRPlugin
 from ckanext.zarr.tests import get_context
 
 

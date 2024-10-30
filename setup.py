@@ -84,7 +84,7 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
         [ckan.plugins]
-        zarr=ckanext.zarr.plugin:WHOAFROPlugin
+        zarr=ckanext.zarr.plugin:ZaRRPlugin
 
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
