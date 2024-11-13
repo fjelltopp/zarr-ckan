@@ -4,6 +4,3 @@
 [submodule "ckanext-zarr"]
 	path = ckanext-zarr
 	url = git@github.com:fjelltopp/ckanext-zarr.git
-[submodule "ckanext-fjelltopp-theme"]
-	path = ckanext-fjelltopp-theme
-	url = git@github.com:fjelltopp/ckanext-fjelltopp-theme.git
