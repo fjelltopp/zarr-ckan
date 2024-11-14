@@ -6,7 +6,7 @@ cd /usr/lib/ckan/ckanext-zarr/ckanext/zarr/react/ && \
     npm run build
 
 # Build fjelltopp theme sass files
-FJELLTOPP_THEME="$CKAN_HOME/venv/src/ckanext-fjelltopp-theme"
+FJELLTOPP_THEME="$CKAN_VENV/src/ckanext-fjelltopp-theme"
 if [ -d "$FJELLTOPP_THEME" ]; then
   cd $FJELLTOPP_THEME
   if [ "$CKAN_SITE_URL" = "http://zarr.minikube" ]; then
