@@ -81,7 +81,7 @@ itsdangerous = "==2.0.1"
 # Install packages under active development in editable mode
 ckan = {path = "./ckan"}
 ckanext-zarr = {editable = true, path = "./ckanext-zarr"}
-ckanext-fjelltopp-theme = {editable = true, path = "./ckanext-fjelltopp-theme"}
+ckanext-fjelltopp-theme = {editable = true, ref = "v1.0.1", git = "https://github.com/fjelltopp/ckanext-fjelltopp-theme.git"}
 
 [dev-packages]
 beautifulsoup4 = "*"
