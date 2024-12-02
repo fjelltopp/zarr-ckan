@@ -91,6 +91,7 @@ pipelineJob("CKAN-deploy") {
           extensions {
             submoduleOptions {
               parentCredentials(true)
+              recursiveSubmodules(true)
             }
           }
           scriptPath('jenkinsfiles/zarr_deploy.groovy')
