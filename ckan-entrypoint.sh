@@ -42,6 +42,9 @@ write_config () {
 }
 
 # Wait for PostgreSQL
+if [ -z "$CKAN_SQLALCHEMY_URL" ]; then
+  abort "ERROR: no CKAN_SQLALCHEMY_URL specified in docker-compose.yml"
+fi
 while ! pg_isready -d "$CKAN_SQLALCHEMY_URL"; do
   sleep 1;
 done
@@ -49,11 +52,6 @@ done
 # If we don't already have a config file, bootstrap
 if [ ! -e "$CONFIG" ]; then
   write_config
-fi
-
-# Get or create CKAN_SQLALCHEMY_URL
-if [ -z "$CKAN_SQLALCHEMY_URL" ]; then
-  abort "ERROR: no CKAN_SQLALCHEMY_URL specified in docker-compose.yml"
 fi
 
 if [ -z "$CKAN_SOLR_URL" ]; then
