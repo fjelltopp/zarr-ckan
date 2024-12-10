@@ -376,3 +376,7 @@
     text-align: inherit;
     float: right;
 }
+
+ul.nav.nav-tabs {
+    z-index: 9;
+}
