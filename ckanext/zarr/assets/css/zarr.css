@@ -377,6 +377,23 @@
     float: right;
 }
 
+
 ul.nav.nav-tabs {
     z-index: 9;
 }
+
+.dataset table.table.table-striped.table-bordered.table-condensed {
+    tr td {
+        dd {
+            word-break: break-all;
+        }
+    }
+}
+
+.dataset {
+    .promoted .description p,
+    #dataset-description p,
+    .prose.notes
+    {
+        text-align: justify;
+    }
