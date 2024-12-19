@@ -73,4 +73,13 @@ ckan --config "$CONFIG" db init
 echo "Running short urls db init: ..."
 ckan --config "$CONFIG" versions initdb
 ckan --config "$CONFIG" short-urls initdb
+
+# Setup Google Analytics if enabled
+if [ "$CKAN_GOOGLEANALYTICS_ENABLED" = "True" ]; then
+    echo "Set up tables for Google analytics:"
+    ckan --config "$CONFIG" googleanalytics init
+    echo "Load analytics from Google into the local database:"
+    ckan --config "$CONFIG" googleanalytics load "${CKAN_CONFIG}/google_analytics_credentials.json"
+fi
+
 exec "$@"
