@@ -87,7 +87,7 @@ ckanext-fjelltopp-theme = {editable = true, ref = "v1.0.1", git = "https://githu
 ckanext-googleanalytics = {editable = true, ref = "6769343bdb3ea519213092c0f752d9e47e8d3834", git = "https://github.com/fjelltopp/ckanext-googleanalytics4.git"}
 gdata = "~=2.0"
 google-api-python-client = ">=1.6.1, <1.7.0"
-pyOpenSSL = ">=16.2.0"
+pyOpenSSL = "==24.2.1"
 rsa = ">=3.1.4, <=4.0"
 
 [dev-packages]
