@@ -75,6 +75,7 @@ ckanext-scheming = {editable = true, ref = "8d62a28370c4f231dbf2f9688ede93a03564
 ckanext-versions = {editable = true, ref = "3a6094acd730f3495b0f8b99b14a2340042a721b", git = "https://github.com/datopian/ckanext-versions"}
 ckanext-dcat = {editable = true, ref = "51d651315ff2ff594ebd6eb1d658bc7e9553310c", git = "https://github.com/ckan/ckanext-dcat"}
 ckanext-short-urls = {editable = true, ref = "2.0.0", git = "https://github.com/fjelltopp/ckanext-short-urls"}
+ckanext-file-uploader = {editable = true, ref = "v1.0.0-rc1", git = "https://github.com/fjelltopp/ckanext-file-uploader"}
 # Markupsafe and isdangerous downgraded because of dependencies issue
 markupsafe = "==2.0.1"
 itsdangerous = "==2.0.1"
@@ -82,7 +83,6 @@ itsdangerous = "==2.0.1"
 ckan = {path = "./ckan"}
 ckanext-zarr = {editable = true, path = "./ckanext-zarr"}
 ckanext-fjelltopp-theme = {editable = true, ref = "v1.0.1", git = "https://github.com/fjelltopp/ckanext-fjelltopp-theme.git"}
-ckanext-file-uploader = {file = "./ckanext-file-uploader", editable = true}
 
 # Google analytics and dependencies
 ckanext-googleanalytics = {editable = true, ref = "6769343bdb3ea519213092c0f752d9e47e8d3834", git = "https://github.com/fjelltopp/ckanext-googleanalytics4.git"}

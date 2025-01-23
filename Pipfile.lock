@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f7609bfd09fae8b967516de39a935a775082e33c5f6fcfe8837ff948f631528f"
+            "sha256": "6e99f5baca93d67dfb71c9de89965f49e5cae6fd81df047f6b5d40ec47293313"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -332,7 +332,8 @@
         },
         "ckanext-file-uploader": {
             "editable": true,
-            "file": "./ckanext-file-uploader"
+            "git": "https://github.com/fjelltopp/ckanext-file-uploader",
+            "ref": "8eb76b8d19a87591784bfdd4edfe742fc6606378"
         },
         "ckanext-fjelltopp-theme": {
             "editable": true,
@@ -1686,11 +1687,11 @@
         },
         "tzdata": {
             "hashes": [
-                "sha256:7d85cc416e9382e69095b7bdf4afd9e3880418a2413feec7069d533d6b4e31cc",
-                "sha256:a48093786cdcde33cad18c2555e8532f34422074448fbc874186f0abd79565cd"
+                "sha256:24894909e88cdb28bd1636c6887801df64cb485bd593f2fd83ef29075a81d694",
+                "sha256:7e127113816800496f027041c570f50bcd464a020098a3b6b199517772303639"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==2024.2"
+            "version": "==2025.1"
         },
         "tzlocal": {
             "hashes": [
@@ -1917,11 +1918,11 @@
         },
         "zope": {
             "hashes": [
-                "sha256:6bcdebc93730f1f0c339da1f4220ee11b11861eb4ed486cb6911db0a2e52a2fd",
-                "sha256:8dbdb29de467efb9a77f316bfebb9703e19ff5403921c68a92369f3e59315324"
+                "sha256:2d87353605b6d7d884a711c19d1c96e2e4489689ceee858aafa11af2368ab026",
+                "sha256:de41bf0b920e1b9f437394e57a9a2af1c7a82734560221f4a9f1554ac2988c22"
             ],
             "index": "pypi",
-            "version": "==5.11.1"
+            "version": "==5.12"
         },
         "zope.annotation": {
             "hashes": [
@@ -2793,11 +2794,11 @@
         },
         "executing": {
             "hashes": [
-                "sha256:8d63781349375b5ebccc3142f4b30350c0cd9c79f921cde38be2be4637e98eaf",
-                "sha256:8ea27ddd260da8150fa5a708269c4a10e76161e2496ec3e587da9e3c0fe4b9ab"
+                "sha256:11387150cad388d62750327a53d3339fad4888b39a6fe233c3afbb54ecffd3aa",
+                "sha256:5d108c028108fe2551d1a7b2e8b713341e2cb4fc0aa7dcf966fa4327a5226755"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==2.1.0"
+            "version": "==2.2.0"
         },
         "factory-boy": {
             "hashes": [
@@ -2809,11 +2810,11 @@
         },
         "faker": {
             "hashes": [
-                "sha256:49dde3b06a5602177bc2ad013149b6f60a290b7154539180d37b6f876ae79b20",
-                "sha256:ac4cf2f967ce02c898efa50651c43180bd658a7707cfd676fcc5410ad1482c03"
+                "sha256:3457789911e97ce53505c8bf1ca7d4cde2bc72f8d1812c9bb5d021f6d13f13f1",
+                "sha256:57267f9b62fdf0c64b6433150e216709a9a239ec9651de0515f73c9ea2fa14e6"
             ],
             "index": "pypi",
-            "version": "==33.3.1"
+            "version": "==34.0.2"
         },
         "flask": {
             "hashes": [
@@ -3303,11 +3304,11 @@
         },
         "prompt-toolkit": {
             "hashes": [
-                "sha256:d6623ab0477a80df74e646bdbc93621143f5caf104206aa29294d53de1a03d90",
-                "sha256:f49a827f90062e411f1ce1f854f2aedb3c23353244f8108b89283587397ac10e"
+                "sha256:544748f3860a2623ca5cd6d2795e7a14f3d0e1c3c9728359013f79877fc89bab",
+                "sha256:9b6427eb19e479d98acff65196a307c555eb567989e6d88ebbb1b509d9779198"
             ],
-            "markers": "python_full_version >= '3.7.0'",
-            "version": "==3.0.48"
+            "markers": "python_full_version >= '3.8.0'",
+            "version": "==3.0.50"
         },
         "ptyprocess": {
             "hashes": [
@@ -3341,10 +3342,10 @@
         },
         "pydevd-pycharm": {
             "hashes": [
-                "sha256:1a988533ddd617da8d3dd032c49e0234860abab04fa589a92fd2b14e4092b591"
+                "sha256:5ba17e4e13e41661d6d4b790bab9e404d268e120d04dd682952d6bf156a6cdfc"
             ],
             "index": "pypi",
-            "version": "==243.23654.74"
+            "version": "==251.17181.23"
         },
         "pyfakefs": {
             "hashes": [
