@@ -1,0 +1,15 @@
+{
+    "scheming_presets_version": 1,
+    "about": "These are Scheming presets specific to ZaRR",
+    "about_url": "http://github.com/ckan/ckanext-scheming#preset",
+    "presets": [
+      {
+        "preset_name": "approval",
+        "values": {
+          "form_snippet": "confirm.html",
+          "display_snippet": "confirm.html",
+          "validators": "approval_required"
+        }
+      }
+    ]
+}

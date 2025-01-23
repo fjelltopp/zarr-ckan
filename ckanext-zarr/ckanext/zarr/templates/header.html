@@ -1,0 +1,27 @@
+{% ckan_extends %}
+
+{% block header_logo %}
+    {% snippet 'snippets/header_logo.html',
+        site_title = g.site_title,
+        logo='/images/zarr_logo.png',
+        header_title='Zambia National <br/>Research Repository' | safe %}
+{% endblock %}
+
+{%  block nav_items_signed %}
+            {{ h.build_nav_main(
+                ('organization.index', _('Organizations')),
+                ('dataset.search', _('Data')),
+                ('home.about', _('About'))
+                 ) }}
+{% endblock %}
+
+
+{%  block nav_items_unsigned %}
+    {{ h.build_nav_main(
+        ('organization.index', _('Organizations')),
+        ('dataset.search', _('Data')),
+        ('home.about', _('About')),
+        ('user.login', _('Log in'))
+         ) }}
+{% endblock %}
+

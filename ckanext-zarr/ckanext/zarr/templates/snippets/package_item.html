@@ -1,0 +1,17 @@
+{% ckan_extends %}
+
+
+{% block heading %}
+    <h2 class="dataset-heading">
+        <a href="{{ dataset_url }}" title="{{ title }}">
+            {{title|truncate(80)}}
+        </a>
+        {% set resource_types = h.get_dataset_resource_type_groups(package.id, dataset_type='data') %}
+        {% for type in resource_types %}
+        <span class="badge resource-type-{{ type['value'] }}">{{ _(type['label']) }}</span>
+        {% endfor %}
+    </h2>
+    <div class="modified">
+        {{_('Modified')}} {{ h.time_ago_from_timestamp(package.metadata_modified) }}, {{ h.get_last_modifier(package.id) }} &middot; {{_('Downloads:')}} {{ h.get_package_stats(package.id) }}
+    </div>
+{% endblock %}

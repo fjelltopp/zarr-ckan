@@ -1,0 +1,399 @@
+/* This file overwrites css from the base ckan theme */
+.homepage .promoted-background {
+    background: url("/images/zarr_bg.png") no-repeat center center;
+    background-size: cover;
+}
+
+.homepage .promoted-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 72px);
+    height: 100%;
+    background: url("/images/zarr_bg_transparent_layer.png") no-repeat center center;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.homepage .hero .insights figure {
+    margin-top: 20px;
+    width: 560px;
+    max-width: 100%;
+}
+
+.homepage .hero .insights figure iframe {
+    width: 100%;
+}
+
+.homepage .hero .insights figcaption {
+    margin-left: 15px;
+    width: 90%;
+}
+
+.promoted-background {
+    background-color: #13240F;
+}
+
+.promoted-container {
+    position: relative;
+    z-index: 2;
+}
+
+.recently-updated .view-all-btn {
+    background: none;
+}
+
+.search-section .big-search-form .lens-btn {
+    background-color: var(--light);
+    padding-right: 14px;
+    padding-left: 14px;
+}
+
+.subscribe .register {
+    color: white;
+    background-color: #13240F;
+    border: white thin solid;
+}
+
+.footer-search-section .fa-search {
+    color: var(--primary);
+}
+
+.topics-background {
+    margin-top: 48px;
+    margin-bottom: 64px;
+    background-color: white;
+}
+
+.topics-background H1:first-child {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.04em;
+    text-align: left;
+}
+
+.topics-background .container {
+    width: 100%;
+}
+
+
+.topics {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.topics li:last-child {
+    margin-right: 0;
+}
+
+.topics li {
+    display: inline flex;
+    margin-right: 21px;
+    margin-top: 24px;
+    width: 124px;
+    height: 96px;
+    border: #EBF1EA solid thin;
+    border-radius: 4px;
+}
+
+.topics li a {
+    margin: 16px;
+    width: 92px;
+    height: 64px;
+}
+
+.topics li a .topic-top-square {
+    background-color: #DFF0DB;
+    width: 40px;
+    height: 40px;
+    margin-left: 26px;
+    margin-right: 26px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.topics li a .topic-link {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #13240F;
+}
+
+.fa-search {
+    color: var(--secondary);
+}
+
+#dataset-search-form .btn-default:hover > .fa-search,
+#organization-datasets-search-form .btn-default:hover > .fa-search,
+#organization-search-form .btn-default:hover > .fa-search,
+#group-search-form .btn-default:hover > .fa-search {
+    color: #198A00;
+}
+
+#dataset-search-form .btn-default > .fa-search,
+#organization-datasets-search-form .btn-default > .fa-search,
+#organization-search-form .btn-default > .fa-search,
+#group-search-form .btn-default > .fa-search {
+    color: #DFF0DB;
+}
+
+.big-search-form .lens-btn {
+    background-color: white;
+    padding-right: 14px;
+    padding-left: 14px;
+}
+
+.dataset-resources li a.badge, .dataset-resources li a.badge:hover {
+    color: var(--tag) !important;
+}
+
+/* package read - additional info */
+.additional-info {
+    margin-top: 48px;
+}
+
+.additional-info .table {
+    border-color: var(--primary10);
+}
+
+.additional-info .table thead {
+    background-color: var(--primary10);
+}
+
+.additional-info .group-header {
+    border-bottom: var(--primary65) thin solid;
+    background-color: var(--primary10);
+}
+
+.additional-info .table > :not(:first-child) {
+    border-top: var(--primary65) 2px solid;
+}
+
+.additional-info .table tbody th {
+    font-weight: 550;
+}
+
+.additional-info .table tbody td.dataset-details ol {
+    list-style-position: inside;
+    left: 0;
+    padding-left: 0;
+    margin-left: 0;
+
+}
+
+.additional-info .schema-group {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: var(--secondary);
+    background-color: var(--primary10);
+    padding: 10px 10px 3px;
+    border-radius: 4px;
+    border-bottom: var(--secondary) thin solid;
+}
+
+.additional-info tr {
+    padding : 0;
+}
+
+.package-read .tag-list {
+    padding: 0;
+}
+
+.package-read .tag-list {
+    margin-top: 36px;
+    background: none;
+    border: none;
+}
+
+.package-read .tag-list li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: var(--tag-background);
+    border-radius: 4px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+}
+
+.package-read .tag,
+.package-read .tag:hover
+{
+    display: inline-block;
+    background-color: transparent;
+    color: var(--tag-dark);
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    box-shadow: none;
+}
+
+.package-read #dataset-resources {
+    margin-top: 36px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .desc-wide {
+      display: none;
+    }
+    .desc-tablet {
+      display: block;
+    }
+}
+
+/* about */
+.zarr-about {
+    line-height: 1.6;
+    color: var(--primary);
+    text-align: justify;
+}
+
+.zarr-about h3 strong {
+    font-weight: 700;
+    padding-bottom: 24px;
+}
+
+.zarr-about h3 {
+    font-weight: 400;
+    color: var(--primary);
+    border-bottom: 1px solid var(--secondary);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    font-size: 17px;
+}
+
+.zarr-about h4 {
+    color: var(--secondary);
+    margin-top: 36px;
+    font-size: 18px;
+}
+
+.zarr-about p {
+    margin-bottom: 15px;
+}
+
+.zarr-about ul {
+    padding-left: 20px;
+}
+
+.zarr-about .contact {
+    background-color: var(--primary10);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: var(--primary);
+}
+/* about */
+
+/* misc */
+.dev-banner {
+    background-color: var(--primary);
+}
+
+@media only screen and (min-width: 628px) {
+    ul li.dev-banner a {
+        margin-left: 0 !important;
+        background-color: var(--primary) !important;
+    }
+}
+
+.module-heading {
+    background-color: var(--primary10);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    --bs-table-accent-bg: var(--primary10);
+}
+
+.dataset-heading .bg-secondary, .dataset-private.badge.badge-inverse.pull-right {
+    background-color: var(--primary65) !important; /* original is :important as well */
+    box-shadow: 0 0 0 1px rgba(25, 138, 0, 0.6);
+}
+
+.dataset-resources li  {
+    box-shadow: 0 0 0 1px rgba(255, 165, 0, 0.4);
+}
+
+.editor .editor-info-block {
+    background-color: var(--primary10);
+}
+
+.stages li {
+    background-color: var(--primary10);
+}
+
+/* misc */
+/* dataset creation / update styles */
+.form-group .form-label {
+    font-size: 16px;
+}
+
+.scheming-repeating-subfields-group .form-group .form-label {
+    font-size: 14px;
+
+}
+.scheming-repeating-subfields-group header.panel-heading,
+.scheming-repeating-subfields-group .fields-removed-notice {
+    font-size: 14px;
+    color: var(--A11y);
+}
+
+.licence-space {
+    padding-top: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.dataset.promoted-background .promoted-container .badge {
+    margin-right: 5px;
+}
+
+.dataset-content > h2.dataset-heading > span.badge:not(:first-of-type) {
+    margin-left: 5px !important;
+}
+
+.user-profile-page .dataset-content .dataset-heading span.badge {
+    margin-left: 5px;
+    align-self: start;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-align: inherit;
+    float: right;
+}
+
+
+ul.nav.nav-tabs {
+    z-index: 9;
+}
+
+.dataset table.table.table-striped.table-bordered.table-condensed {
+    tr td {
+        dd {
+            word-break: break-all;
+        }
+    }
+}
+
+.dataset {
+    .promoted .description p,
+    #dataset-description p,
+    .prose.notes
+    {
+        text-align: justify;
+    }

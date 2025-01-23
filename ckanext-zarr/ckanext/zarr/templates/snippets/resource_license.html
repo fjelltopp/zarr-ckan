@@ -1,0 +1,16 @@
+{%  extends 'snippets/license.html' %}
+
+{% block license %}
+  {% if text_only %}
+      {% set text_license = license_string(pkg_dict) | trim %}
+      {% if 'License not specified' in text_license %}
+          {{ 'not specified' }}
+      {%  else %}
+        {{ text_license }}
+      {% endif %}
+  {% else %}
+      {% block license_wrapper %}
+        {{ super() }}
+      {% endblock %}
+  {% endif %}
+{% endblock %}
