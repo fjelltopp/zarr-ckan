@@ -1,0 +1,68 @@
+{% ckan_extends %}
+
+{% block promoted_toolbar %}
+
+<div class="dataset promoted-background promoted-breadcrumbs">
+<div class="flag-vertical-bars">
+    <div class="flag-bar flag-green"></div>
+    <div class="flag-bar flag-red"></div>
+    <div class="flag-bar flag-black"></div>
+    <div class="flag-bar flag-orange"></div>
+</div>
+    <div class="container">
+        <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
+            <div class="container">
+                <div class="promoted">
+                    <div class="promoted-container container">
+                        <div class="package-subtitle-and-action">
+                            <div class="mini-breadcrumb">
+                                {%- if not pkg -%}
+                                    <p class="subtitle"> {{_('Home')}} / {{_(dataset_type)}} </p>
+                                {%- else -%}
+                                    {%- set dataset_type_title = h.scheming_get_dataset_schema('data').get('dataset_type', pkg.type) -%}
+                                    <p class="subtitle"> {{_('Home')}} / {{_(dataset_type_title)}} </p>
+                                {% endif %}
+                            </div>
+                            {%- if pkg -%}
+                                <div class="manage-button">
+                                    <div class="content_action">
+                                    {% block content_action %}{% endblock %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        {%- if not pkg -%}
+                            <h1 class="headline">{{_('New {dataset_type}').format(dataset_type=dataset_type)}}</h1>
+                        {%- else -%}
+                            <h1 class="headline">{% link_for pkg.title, named_route=pkg.type ~ '.read', id=pkg.name, title=pkg.title %}</h1>
+                            {% if pkg.private %}
+                              <span class="dataset-private badge badge-inverse">
+                                <i class="fa fa-lock"></i>
+                                {{ _('Private') }}
+                              </span>
+                            {% endif %}
+                            {% set resource_types = h.get_dataset_resource_type_groups(pkg.id, dataset_type='data') %}
+                            {% for type in resource_types %}
+                            <span class="badge resource-type-{{ type['value'] }}">{{ _(type['label']) }}</span>
+                            {% endfor %}
+                            <div class="description">
+                                {%- set notes = h.render_markdown(h.get_translated(pkg, 'notes')) -%}
+                                {{ notes | truncate(430)}}
+                                {%- if notes | length > 430 -%}
+                                    <a class="read-more" href="{% url_for pkg.type ~ '.read', id=pkg.name %}#dataset-description">{{_('Read More')}}</a>
+                                {%- endif -%}
+                            </div>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%- if pkg -%}
+        <ul class="nav nav-tabs">
+            {% block content_primary_nav %}{% endblock %}
+        </ul>
+        {%- endif -%}
+    </div>
+</div>
+{% endblock %}

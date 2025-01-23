@@ -1,0 +1,20 @@
+zarr-theme:
+  output: zarr/%(version)s-zarr.css
+  contents:
+    - css/zarr.css
+
+zarr-theme-palette:
+  output: zarr/%(version)s-zarr-palette.css
+  contents:
+    - css/zarr_palette.css
+
+FileInputComponentStyles:
+    contents:
+        - css/FileInputComponent.css
+    output: zarr/%(version)s_FileInputComponent.css
+
+FileInputComponentScripts:
+    contents:
+        - frictionless-js.js
+        - build/FileInputComponent.js
+    output: zarr/%(version)s_FileInputComponent.js

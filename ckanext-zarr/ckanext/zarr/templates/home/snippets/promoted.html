@@ -1,0 +1,27 @@
+{% block promote %}
+<div class="promoted promoted-home col-xs-12 col-sm-12 col-lg-12" >
+    <div class="promoted-container row">
+
+            <div class="promoted-text">
+                <p class="subtitle"></p>
+                <h1 class="headline">Zambia National Research Repository</h1>
+                <p class="description">
+                    {% trans %}
+                        This repository aims to enhance research accessibility and utilisation across Zambia, by:
+                        <ul>
+                        <li>Ensuring broad access and interoperability</li>
+                        <li>Facilitating efficient data provision</li>
+                        <li>Consolidating and disseminating data from various institutions</li>
+                        </ul>
+                    {% endtrans %}
+                </p>
+                <p class="learn-more"><a href="{{ h.url_for('home.about') }}">{{ _('Learn more about the repository') }}</a></p>
+            </div>
+
+            <div class="search-section">
+            <h2>{{ _('Search datasets') }}</h2>
+            {% snippet 'snippets/search_input.html', placeholder='e.g environment' %}
+            </div>
+    </div>
+</div>
+{% endblock %}

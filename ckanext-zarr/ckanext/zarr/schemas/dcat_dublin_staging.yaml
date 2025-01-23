@@ -1,0 +1,246 @@
+scheming_version: 2
+dataset_type: dataset
+about: Dublin Core Metadata Element v1.1 schema
+about_url: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-3
+
+dataset_fields:
+
+- start_form_page:
+    title: Overview
+    description: These fields provide an overview of the dataset, helping users to search and find relevant data within the catalogue.
+
+  field_name: title
+  label: Title
+  preset: title
+  required: true
+  form_placeholder: A name given to the dataset
+  display_group: Overview
+
+- field_name: name
+  label: URL
+  preset: dataset_slug
+  required: true
+  form_placeholder: An unambiguous reference to the dataset. Recommended practice is to use the automatically generated identifiers.
+  display_group: Overview
+
+- field_name: notes
+  label: Description
+  required: true
+  form_snippet: markdown.html
+  form_placeholder: "An account of the dataset. The description may include but is not limited to: an abstract, a table of contents or a free-text account of the dataset."
+  display_group: Overview
+
+- field_name: tag_string
+  label: Subject
+  preset: tag_string_autocomplete
+  form_placeholder: The topic of the dataset, e.g. economy, mental health, government
+  required: true
+  display_group: Overview
+
+- field_name: owner_org
+  label: Organization
+  preset: dataset_organization
+  required: true
+  display_group: Overview
+
+- field_name: license_id
+  label: License
+  form_snippet: license.html
+  required: true
+  display_group: Overview
+
+- field_name: no_pii_confirmation
+  label: No PII Confirmation
+  form_placeholder: I confirm that this dataset contains no personally identifiable information.
+  preset: approval
+  required: true
+  display_group: Overview
+
+
+- start_form_page:
+    title: Metadata
+    description: Dublin Core Metadata Elements (excluding those already captured)
+
+  field_name: creator
+  label: Creator
+  repeating_label: Creator
+  repeating_once: true
+  repeating_subfields:
+    - field_name: name
+      label: Name
+    - field_name: email
+      label: Email
+      display_snippet: email.html
+  help_text: An entity primarily responsible for making the dataset. Examples of a Creator include a person, an organization, or a service.
+  display_group: Metadata
+  validators: ignore_missing
+
+- field_name: contributor
+  label: Contributor
+  repeating_label: Contributor
+  repeating_once: true
+  repeating_subfields:
+    - field_name: name
+      label: Name
+    - field_name: email
+      label: Email
+      display_snippet: email.html
+  help_text: An entity responsible for making contributions to the dataset. Examples of a Contributor include a person, an organization, or a service.
+  display_group: Metadata
+  validators: ignore_missing
+
+- field_name: publisher
+  label: Publisher
+  repeating_label: Publisher
+  repeating_once: true
+  repeating_subfields:
+    - field_name: name
+      label: Name
+    - field_name: email
+      label: Email
+      display_snippet: email.html
+    - field_name: url
+      label: URL
+      display_snippet: link.html
+  help_text: Entity responsible for making the dataset available. Examples of a Publisher include a person, an organization, or a service.
+  display_group: Metadata
+  validators: ignore_missing
+
+- field_name: resource_type
+  label: Resource Type
+  preset: select
+  choices:
+  - value: "sound"
+    label: Audio
+  - value: "collection"
+    label: Collection
+  - value: "dataset"
+    label: Dataset
+  - value: "text"
+    label: Document
+  - value: "event"
+    label: Event
+  - value: "still_image"
+    label: Image
+  - value: "interactive_resource"
+    label: Interactive Resource
+  - value: "physical_object"
+    label: Physical Object
+  - value: "service"
+    label: Service
+  - value: "software"
+    label: Software
+  - value: "moving_image"
+    label: Video
+  - value: "other"
+    label: Other
+  help_text: The nature or genre of the dataset.
+  display_group: Metadata
+  validators: ignore_missing
+
+- field_name: rights
+  label: Rights
+  form_snippet: markdown.html
+  help_text: Information about rights held in and over the dataset. Typically, rights information includes a statement about various property rights associated with the dataset, including intellectual property rights.
+  display_group: Metadata
+  validators: ignore_missing
+
+- field_name: language
+  label: Language
+  preset: select
+  choices:
+  - value: en
+    label: English
+  - value: fr
+    label: French
+  - value: es
+    label: Spanish
+  - value: de
+    label: German
+  - value: it
+    label: Italian
+  - value: ja
+    label: Japanese
+  - value: zh
+    label: Chinese
+  - value: other
+    label: Other
+  form_placeholder: The language(s) of the dataset
+  help_text: A language of the dataset.
+  display_group: Metadata
+  default: en
+
+- field_name: source
+  label: Source
+  repeating_label: Source
+  repeating_once: true
+  repeating_subfields:
+    - field_name: name
+      label: Name
+    - field_name: notes
+      label: Notes
+    - field_name: URL
+      label: URL
+    - field_name: Identifier
+      label: Identifier
+  help_text: Any related source. Recommended practice is to identify the related source by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided, e.g. DOI.
+  display_group: Metadata
+  validators: ignore_missing
+
+- field_name: relation
+  label: Relation
+  repeating_label: Relation
+  repeating_once: true
+  repeating_subfields:
+    - field_name: name
+      label: Name
+    - field_name: notes
+      label: Notes
+    - field_name: URL
+      label: URL
+    - field_name: Identifier
+      label: Identifier
+  help_text: Any related source. Recommended practice is to identify the related source by means of a URL. If this is not possible or feasible, a string conforming to a formal identification system may be provided, e.g. DOI.
+  display_group: Metadata
+  validators: ignore_missing
+
+- field_name: spatial_coverage
+  label: Spatial coverage
+  repeating_subfields:
+    - field_name: name
+      label: Geographic Region
+  help_text: A geographic region that is covered by the dataset.
+  display_group: Metadata
+  validators: ignore_missing
+
+- field_name: temporal_start
+  label: Temporal Start Date
+  preset: date
+  help_text: The start of the time period covered by this data. For time series data, this should be the earliest date reported in the data.
+  display_group: Metadata
+  validators: ignore_missing date_validator
+
+- field_name: temporal_end
+  label: Temporal End Date
+  preset: date
+  help_text: The end of the time period covered by this data. For time series data, this should be the latest date reported in the data. Leave blank if dataset has an indefinite end.
+  display_group: Metadata
+  validators: ignore_missing
+
+resource_fields:
+
+- field_name: name
+  label: Name
+  form_placeholder:
+  help_text: A name given to the resource.
+
+- field_name: description
+  label: Description
+  form_snippet: markdown.html
+  help_text: An account of the resource.
+
+- field_name: format
+  label: Format
+  preset: resource_format_autocomplete
+  help_text: The file format of the resource. If not provided it will be guessed.
+  

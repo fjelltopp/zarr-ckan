@@ -1,0 +1,43 @@
+{% import 'macros/form.html' as form %}
+
+<style>
+fieldset.checkboxes label {
+    font-weight: normal;
+    display: block;
+}
+fieldset.checkboxes label:after {
+    content: none;
+}
+fieldset.checkboxes label input {
+    width: auto;
+    top: 0;
+}
+</style>
+
+{%- call form.input_block(
+    label=h.scheming_language_text(field.label),
+    classes=field.classes if 'classes' in field else ['control-medium'],
+    error=errors[field.field_name],
+    is_required=h.scheming_field_required(field)) -%}
+
+    {% set placeholder = h.scheming_language_text(field.form_placeholder) %}
+
+
+    <fieldset class="checkboxes">
+        <label for="approved-{{ field.field_name }}">
+            <input id="approved-{{ field.field_name }}"
+                type="checkbox"
+                 {{"checked " if data[field.field_name] == '1'}}
+                name="approved-{{ field.field_name }}"
+                onchange="
+                    var hiddenInput = document.getElementById('approval-status-{{ field.field_name }}');
+                    hiddenInput.value = this.checked ? '1' : '0';
+                "
+            />
+            {{ placeholder }}
+        </label>
+        <input type="hidden" id="approval-status-{{ field.field_name }}" name="{{ field.field_name }}" value="0"/>
+    </fieldset>
+
+    {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+{%- endcall -%}
