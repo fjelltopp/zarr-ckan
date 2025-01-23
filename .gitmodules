@@ -1,6 +1,3 @@
 [submodule "ckan"]
 	path = ckan
 	url = git@github.com:ckan/ckan.git
-[submodule "ckanext-zarr"]
-	path = ckanext-zarr
-	url = git@github.com:fjelltopp/ckanext-zarr.git
