@@ -1,10 +1,5 @@
 #!/bin/sh
 
-# Build React components
-cd /usr/lib/ckan/ckanext-zarr/ckanext/zarr/react/ && \
-    npm install && \
-    npm run build
-
 # Build fjelltopp theme sass files
 FJELLTOPP_THEME="$CKAN_VENV/src/ckanext-fjelltopp-theme"
 if [ -d "$FJELLTOPP_THEME" ]; then
