@@ -82,6 +82,7 @@ itsdangerous = "==2.0.1"
 ckan = {path = "./ckan"}
 ckanext-zarr = {editable = true, path = "./ckanext-zarr"}
 ckanext-fjelltopp-theme = {editable = true, ref = "v1.0.1", git = "https://github.com/fjelltopp/ckanext-fjelltopp-theme.git"}
+ckanext-file-uploader = {file = "./ckanext-file-uploader", editable = true}
 
 # Google analytics and dependencies
 ckanext-googleanalytics = {editable = true, ref = "6769343bdb3ea519213092c0f752d9e47e8d3834", git = "https://github.com/fjelltopp/ckanext-googleanalytics4.git"}
