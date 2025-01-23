@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6e99f5baca93d67dfb71c9de89965f49e5cae6fd81df047f6b5d40ec47293313"
+            "sha256": "dc0487630c8c31f2199cfb2f49eab4106e1549b57b3c2cea39f8485aea4a3da0"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -333,7 +333,7 @@
         "ckanext-file-uploader": {
             "editable": true,
             "git": "https://github.com/fjelltopp/ckanext-file-uploader",
-            "ref": "8eb76b8d19a87591784bfdd4edfe742fc6606378"
+            "ref": "67f17c4300e8b49b852709e16612042030c43681"
         },
         "ckanext-fjelltopp-theme": {
             "editable": true,
@@ -2810,11 +2810,11 @@
         },
         "faker": {
             "hashes": [
-                "sha256:3457789911e97ce53505c8bf1ca7d4cde2bc72f8d1812c9bb5d021f6d13f13f1",
-                "sha256:57267f9b62fdf0c64b6433150e216709a9a239ec9651de0515f73c9ea2fa14e6"
+                "sha256:42f2da8cf561e38c72b25e9891168b1e25fec42b6b0b5b0b6cd6041da54af885",
+                "sha256:926d2301787220e0554c2e39afc4dc535ce4b0a8d0a089657137999f66334ef4"
             ],
             "index": "pypi",
-            "version": "==34.0.2"
+            "version": "==35.0.0"
         },
         "flask": {
             "hashes": [
@@ -2965,7 +2965,7 @@
                 "sha256:4c753b3ec91717fe713c4edd522d625889d8973a349b0e582622f49766de58e6",
                 "sha256:e67f8ac32b04be4714b42fe84ce7dad9c40985b9ca827c592cc303e7c26d9741"
             ],
-            "markers": "python_version >= '3.8'",
+            "markers": "platform_machine != 'ppc64le' and platform_machine != 's390x'",
             "version": "==25.5.0"
         },
         "markdown-it-py": {
