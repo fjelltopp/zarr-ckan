@@ -45,7 +45,7 @@ jobs:
 
       # Build and push staging image on push to main
       - name: Build and push staging image
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/ci'
         uses: docker/build-push-action@v4
         with:
           context: .
