@@ -1,9 +1,23 @@
 #!/bin/sh
 
-# Build React components
-cd /usr/lib/ckan/ckanext-zarr/ckanext/zarr/react/ && \
-    npm install && \
+# Build fjelltopp file uploader js and css files
+FILE_UPLOADER="$CKAN_VENV/src/ckanext-file-uploader"
+if [ -d "$FILE_UPLOADER" ]; then
+  cd "$FILE_UPLOADER/react"
+  # nvm use
+  if [ "$CKAN_SITE_URL" = "http://zarr.minikube" ]; then
+    echo "The Fjelltopp CKAN Extension $FILE_UPLOADER is enabled, building and then watching ..."
+    npm install --include=dev
     npm run build
+    npm run dev &
+  else
+    echo "The Fjelltopp CKAN Extension $FILE_UPLOADER is enabled, building ..."
+    npm clean-install --include=dev
+    npm run build
+  fi
+else
+  echo "The Fjelltopp CKAN Extension $FILE_UPLOADER is not enabled."
+fi
 
 # Build fjelltopp theme sass files
 FJELLTOPP_THEME="$CKAN_VENV/src/ckanext-fjelltopp-theme"
