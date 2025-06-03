@@ -84,7 +84,7 @@ pipelineJob("CKAN-deploy") {
             name('engine')
           }
           remote {
-            url('git@github.com:fjelltopp/fjelltopp-infrastructure.git')
+            url('git@github.com:fjelltopp/zarr-infrastructure.git')
             credentials('jenkins_github_ssh')
             name('origin')
           }
