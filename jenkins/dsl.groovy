@@ -95,7 +95,7 @@ pipelineJob("CKAN-deploy") {
             }
           }
           scriptPath('jenkinsfiles/zarr_deploy.groovy')
-          branch("remotes/origin/master")
+          branch("remotes/origin/main")
         }
       }
     }
