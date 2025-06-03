@@ -79,7 +79,7 @@ pipelineJob("CKAN-deploy") {
       scm {
         git {
           remote {
-            url('git@github.com:fjelltopp/ckan_project_template.git')
+            url('git@github.com:fjelltopp/zarr-ckan.git')
             credentials('jenkins_github_ssh')
             name('engine')
           }
