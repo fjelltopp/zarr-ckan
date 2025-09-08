@@ -30,13 +30,13 @@ The main components of this repository are:
 
 ## Dependency Management
 
-- **Python dependencies** are managed with Pipenv (`Pipfile`, `Pipfile.lock`). This ensures reproducible environments and easy dependency updates. For extension development, `requirements.txt` and `dev-requirements.txt` are also provided.
+- **Python dependencies** are managed with Pipenv (`Pipfile`, `Pipfile.lock`). This ensures reproducible environments and easy dependency updates using [Pipenv](https://pipenv.pypa.io/en/latest/quick_start.html).
 - **Node.js dependencies** (for frontend assets in `ckanext-zarr/ckanext/zarr/react`) are managed via `package.json` in relevant directories.
 - **Docker** is used for containerized deployments, ensuring consistency across environments.
 
 ## Environment Variables
 
-Environment variables are loaded from the `.env` file (not committed to version control). Key variables typically include:
+It is unlikely you will need to use these (as they are largely requried for automatic tests) but environment variables are loaded from the `.env` file (not committed to version control). Key variables typically include:
 
 - `CKAN_SITE_URL` — The base URL for the CKAN instance.
 - `CKAN_SQLALCHEMY_URL` — Database connection string.
@@ -54,7 +54,6 @@ Refer to the [CKAN configuration documentation](https://docs.ckan.org/en/latest/
 - **Use Pipenv for Python dependency management:** Run `pipenv install` to set up the environment.
 - **Linting and formatting:** Use `.flake8` for code style enforcement.
 - **Testing:** Use `pytest` and CKAN's built-in test framework. Configuration files like `test-core.ini` are provided.
-- **Version control:** Use `.gitignore` and to manage files in Git.
 - **Documentation:** Update `README.md` and extension-specific `README.md` files regularly.
 
 ## Useful Links
