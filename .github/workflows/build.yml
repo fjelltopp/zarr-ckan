@@ -47,7 +47,7 @@ jobs:
       # Build and push staging image on push to main
       - name: Build and push staging image
         if: github.ref == 'refs/heads/main'
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: true
@@ -60,7 +60,7 @@ jobs:
       # Build and push release image on tag push
       - name: Build and push release image
         if: startsWith(github.ref, 'refs/tags/')
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: true
