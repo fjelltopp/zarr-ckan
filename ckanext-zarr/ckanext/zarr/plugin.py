@@ -26,6 +26,7 @@ class ZaRRPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
     plugins.implements(plugins.IValidators)
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IAuthenticator)
+    plugins.implements(plugins.IBlueprint)
 
     # ITemplateHelpers
     def get_helpers(self):
@@ -46,6 +47,17 @@ class ZaRRPlugin(plugins.SingletonPlugin, DefaultPermissionLabels):
         toolkit.add_template_directory(config_, "templates")
         toolkit.add_public_directory(config_, "public")
         toolkit.add_resource("assets", "zarr")
+
+    # IBlueprint
+    def get_blueprint(self):
+        """Add custom routes for FAQ and other pages."""
+        blueprint = toolkit.Blueprint('zarr', __name__)
+        blueprint.add_url_rule('/faq', 'faq', self.faq_page)
+        return blueprint
+
+    def faq_page(self):
+        """Render the FAQ page."""
+        return toolkit.render('home/faq.html')
 
     # IFacets
     def dataset_facets(self, facet_dict, package_type):
