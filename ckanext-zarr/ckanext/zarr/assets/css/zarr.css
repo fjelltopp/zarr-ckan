@@ -397,3 +397,78 @@ ul.nav.nav-tabs {
     {
         text-align: justify;
     }
+
+
+
+
+/* ============================================
+   FAQ Page Styles
+   Added: June 2026
+   ============================================ */
+
+.zarr-faq {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.zarr-faq h1 {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.faq-section {
+    margin-bottom: 40px;
+}
+
+.faq-section h2 {
+    color: #0055a5;
+    background-color: #f0f4f8;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-item h3 {
+    color: #003366;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.faq-item p {
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact-support {
+    background-color: #e8f4f8;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-support h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.contact-support a {
+    color: #0055a5;
+    text-decoration: none;
+}
+
+.contact-support a:hover {
+    text-decoration: underline;
+}
