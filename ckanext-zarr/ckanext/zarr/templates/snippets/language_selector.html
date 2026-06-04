@@ -1,0 +1,13 @@
+{% set current_lang = request.environ.CKAN_LANG %}
+
+<nav class="account nav-for-large-screen">
+    <ul class="list-unstyled">
+      {% for locale in h.get_available_locales() %}
+        <li>
+          <a href="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.short_name == current_lang %}selected="selected"{% endif %}>
+          {{ h.format_locale(locale) }}
+        </a>
+        </li>
+      {% endfor %}
+    </ul>
+</nav>

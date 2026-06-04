@@ -358,7 +358,7 @@
         "ckanext-scheming": {
             "editable": true,
             "git": "https://github.com/ckan/ckanext-scheming.git",
-            "ref": "8d62a28370c4f231dbf2f9688ede93a0356410e3"
+            "ref": "e1288e0a2843d847d0e493e931760782ac3683f0"
         },
         "ckanext-sentry": {
             "git": "https://github.com/fjelltopp/ckanext-sentry",

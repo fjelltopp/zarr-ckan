@@ -71,24 +71,20 @@ ckanext-emailasusername = "==1.0.0"
 ckanext-sentry = {ref = "0.1.0", git = "https://github.com/fjelltopp/ckanext-sentry"}
 ckanext-authz-service = {editable = true, ref = "bd4c80f55a714c1117a0e130d07463e383c494c7", git = "https://github.com/datopian/ckanext-authz-service"}
 ckanext-blob-storage = {editable = true, ref = "5b2f59217e8f88a3f2cdb9dc50bf4099d9abe0de", git = "https://github.com/fjelltopp/ckanext-blob-storage"}
-ckanext-scheming = {editable = true, ref = "8d62a28370c4f231dbf2f9688ede93a0356410e3", git = "https://github.com/ckan/ckanext-scheming.git"}
 ckanext-versions = {editable = true, ref = "3a6094acd730f3495b0f8b99b14a2340042a721b", git = "https://github.com/datopian/ckanext-versions"}
 ckanext-dcat = {editable = true, ref = "51d651315ff2ff594ebd6eb1d658bc7e9553310c", git = "https://github.com/ckan/ckanext-dcat"}
 ckanext-short-urls = {editable = true, ref = "2.0.0", git = "https://github.com/fjelltopp/ckanext-short-urls"}
-# Markupsafe and isdangerous downgraded because of dependencies issue
 markupsafe = "==2.0.1"
 itsdangerous = "==2.0.1"
-# Install packages under active development in editable mode
 ckan = {path = "./ckan"}
 ckanext-zarr = {editable = true, path = "./ckanext-zarr"}
 ckanext-fjelltopp-theme = {editable = true, ref = "v1.0.1", git = "https://github.com/fjelltopp/ckanext-fjelltopp-theme.git"}
-
-# Google analytics and dependencies
 ckanext-googleanalytics = {editable = true, ref = "6769343bdb3ea519213092c0f752d9e47e8d3834", git = "https://github.com/fjelltopp/ckanext-googleanalytics4.git"}
 gdata = "~=2.0"
 google-api-python-client = ">=1.6.1, <1.7.0"
 pyOpenSSL = "==24.2.1"
 rsa = ">=3.1.4, <=4.0"
+ckanext-scheming = {editable = true, ref = "e1288e0a2843d847d0e493e931760782ac3683f0", git = "https://github.com/ckan/ckanext-scheming.git"}
 
 [dev-packages]
 beautifulsoup4 = "*"

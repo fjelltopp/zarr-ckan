@@ -1,5 +1,7 @@
 name: Tests
-on: [push, pull_request]
+on:
+  workflow_dispatch:
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -29,20 +31,23 @@ jobs:
       CKAN_REDIS_URL: redis://redis:6379/1
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Install requirements
       # Install any extra requirements your extension has here (dev requirements, other extensions etc)
+      working-directory: ckanext-zarr
       run: |
         pip install -r requirements.txt
         pip install -r dev-requirements.txt
         pip install -e .
     - name: Setup extension
       # Extra initialization steps
+      working-directory: ckanext-zarr
       run: |
         # Replace default path to CKAN core config file with the one on the container
         sed -i -e 's/use = config:.*/use = config:\/srv\/app\/src\/ckan\/test-core.ini/' test.ini
 
         ckan -c test.ini db init
     - name: Run tests
+      working-directory: ckanext-zarr
       run: pytest --ckan-ini=test.ini --cov=ckanext.zarr --disable-warnings ckanext/zarr
 
